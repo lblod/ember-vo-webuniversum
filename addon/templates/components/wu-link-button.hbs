@@ -1,0 +1,12 @@
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{#if icon}}
+    {{wu-icon icon}}
+  {{/if}}
+  {{label}}
+{{/if}}
+
+{{#if command}}
+  <span class="button__command {{commandLocationClass}}">{{command}}</span>
+{{/if}}

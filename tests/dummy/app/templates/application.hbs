@@ -1,0 +1,223 @@
+<div class="page">
+  <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
+    <section class="region">
+      <div class="layout layout--wide">
+        <h1 class="h1">Ember VO Webuniversum showcase</h1>
+        <div class="introduction">
+          <p>A showcase of the Webuniversum components of Vlaanderen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Alerts</h2>
+        <div>
+          {{wu-alert title="Standaard alert" message="Lorem ipsum dolor sit amet, consecetur adipisicing elit."}}
+
+          {{#wu-alert title="Standaard alert met block"}}
+            <p>Lorem ipsum dolor sit amet, consecetur <u>adipisicing</u> elit.</p>
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          {{/wu-alert}}
+
+          {{wu-alert title="Alert met waarschuwings indicatie" message="Lorem ipsum dolor sit amet, consecetur adipisicing elit." isWarning=true}}
+
+          {{wu-alert title="Alert call to action" message="Lorem ipsum dolor sit amet, consecetur adipisicing elit." button="Click me" onClick=(action "dummyClick")}}
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Accordion</h2>
+        <div>
+          {{#wu-accordion label="Open/sluit" openAtStart=true}}
+            <p>Lorem ipsum dolor sit amet, consecetur adipisicing elit.</p>
+          {{/wu-accordion}}
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Datepicker</h2>
+        <div>
+          <p>Selected date: {{dateValue}}</p>
+          {{wu-datepicker value=dateValue maxDate='08.03.2018'}}
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Date range</h2>
+        <div>
+          <p>Selected dates: from {{fromDateValue}} to {{toDateValue}}</p>
+          {{wu-date-range fromValue=fromDateValue toValue=toDateValue
+              fromPlaceholder='01.01.2018' toPlaceholder='31.12.2018'
+              fromMaxDate='08.03.2018'}}
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Buttons</h2>
+        <div>
+          <h4 class="h4">Button with Ember block</h4>
+          {{#wu-button onClick=(action "dummyClick")}}Click me{{/wu-button}}
+        </div>
+
+        <div>
+          <h4 class="h4">Block button</h4>
+          {{wu-button isBlock=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Button command below</h4>
+          {{wu-button label='Click me' command='ctrl+s' commandLocation='below' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Disabled button</h4>
+          {{wu-button disabled=true label='Click me' onClick=null}}
+        </div>
+
+        <div>
+          <h4 class="h4">Large button</h4>
+          {{wu-button size='large' label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Narrow button</h4>
+          {{wu-button isNarrow=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Wide button</h4>
+          {{wu-button isWide=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Link button dark</h4>
+          {{wu-button isLink=true isDark=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Link button</h4>
+          {{wu-button isLink=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Loading button</h4>
+          {{wu-button isLoading=true label='Click me' onClick=null}}
+        </div>
+
+        <div>
+          <h4 class="h4">Secondary button</h4>
+          {{wu-button isSecondary=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Warning button</h4>
+          {{wu-button isWarning=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+        <div>
+          <h4 class="h4">Anchor tag button</h4>
+          {{wu-link-button isWarning=true label='Click me' onClick=(action "dummyClick")}}
+        </div>
+
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Button group</h2>
+        <div>
+          {{#wu-button-group}}
+            {{wu-button label='Button 1' onClick=(action "dummyClick")}}
+            {{wu-button label='Button 2' isSecondary=true onClick=(action "dummyClick")}}
+            {{wu-button label='Button 3' isWarning=true onClick=(action "dummyClick")}}
+          {{/wu-button-group}}
+        </div>
+        <div>
+          <h4 class="h4">Inline</h4>
+          {{#wu-button-group isInline=true}}
+            {{wu-link-button label='Datum: 20 oktober 2018' onClick=(action "dummyClick")}}
+            {{wu-link-button icon='vi-magnifier' onClick=(action "dummyClick")}}
+            {{wu-link-button icon='vi-cross' onClick=(action "dummyClick")}}
+          {{/wu-button-group}}
+        </div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Checkbox</h2>
+        {{#wu-checkbox checked=isCheckedOpt1}}Option 1{{/wu-checkbox}}
+        {{wu-checkbox checked=isCheckedOpt2 label="Option 2" disabled=true}}
+
+        <h4 class="h4">Checkbox block</h4>
+        {{wu-checkbox checked=isCheckedOpt1Block label="Option 1" isBlock=true}}
+        {{wu-checkbox checked=isCheckedOpt2Block label="Option 2" isBlock=true error="This is an error message"}}
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Switch</h2>
+        {{wu-switch checked=isCheckedSwitch label="My switch" disabled=true}}
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Icons</h2>
+        <p>Magnifier: {{wu-icon "vi-magnifier"}}</p>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Pills</h2>
+        {{wu-pill label="Concept"}}
+        {{wu-pill label="Notulen publiek"}}
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Modal dialog</h2>
+
+        {{wu-button label='show simple dialog' onClick=(action "showSimpleDialog")}}
+        {{wu-button label='show dialog with actions' onClick=(action "showDialog")}}
+        {{#if showSimpleModal}}
+          {{#wu-modal title="a dialog" onClose=(action 'dismissModal')}}
+            <div class="modal-dialog__content">
+              <p>uptates repudiandae reiciendis officia minima molestiae. Quia labore et eum voluptatem sunt et exercitationem. Molestiae et vitae natus pariatur est reprehenderit similique. Porro soluta rerum at.</p>
+              <p>Aspernatur amet dicta mollitia. Consequatur qui dolores quo omnis exercitationem natus. Qui iusto quaerat vitae natus sed totam aperiam voluptate. Vel cum molestias esse qui dolor unde vel. Hic qui labore aut.</p>
+            </div>
+          {{/wu-modal}}
+        {{/if}}
+        {{#if showModal}}
+          {{#wu-modal title="a dialog" onClose=(action 'dismissModal')}}
+            <div class="modal-dialog__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dolore, cumque ex, amet beatae doloremque at? Quis libero ipsam illo consectetur sed aut dicta inventore eum deleniti repellendus, aliquid perferendis.
+            </div>
+            <div class="modal-dialog__buttons">
+              <a href="#" role="button" class="button modal-dialog__button" {{action (action 'doSomethingFromModal')}}>Call to action</a>
+              <a href="#" role="button" class="modal-dialog__button" {{action (action 'dismissModal')}}><i class="vi vi-cross vi-u-link"></i>Dismiss</a>
+            </div>
+          {{/wu-modal}}
+        {{/if}}
+      </div>
+    </section>
+  </div>
+</div>
+
+{{outlet}}
