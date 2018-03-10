@@ -1,1 +1,1 @@
-export { default } from 'ember-vo-webuniversum/components/wu-button';
+export { default } from '@lblod/ember-vo-webuniversum/components/wu-button';

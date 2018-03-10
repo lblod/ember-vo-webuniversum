@@ -1,1 +1,1 @@
-export { default } from 'ember-vo-webuniversum/components/wu-datepicker-input';
+export { default } from '@lblod/ember-vo-webuniversum/components/wu-datepicker-input';
