@@ -131,7 +131,20 @@
           <h4 class="h4">Anchor tag button</h4>
           {{wu-link-button isWarning=true label='Click me' onClick=(action "dummyClick")}}
         </div>
-
+        <h4 class="h4">button with popover</h4>
+        {{#popover-button title='Downloaden'}}
+          <ul class="popover__content">
+            <li>
+              <a class="popover__link" href="#">CSV file (excel)</a>
+            </li>
+            <li>
+              <a class="popover__link" href="#">JSON file</a>
+            </li>
+            <li>
+              <a class="popover__link" href="#">Turtle file</a>
+            </li>
+          </ul>
+        {{/popover-button}}
       </div>
     </section>
 
@@ -217,6 +230,7 @@
         {{/if}}
       </div>
     </section>
+
   </div>
 </div>
 
