@@ -196,22 +196,22 @@
         {{wu-button label='show simple dialog' onClick=(action "showSimpleDialog")}}
         {{wu-button label='show dialog with actions' onClick=(action "showDialog")}}
         {{#if showSimpleModal}}
-          {{#wu-modal title="a dialog" onClose=(action 'dismissModal')}}
-            <div class="modal-dialog__content">
+          {{#wu-modal title="A dialog example" onClose=(action 'dismissModal') as |m|}}
+            {{#m.content}}
               <p>uptates repudiandae reiciendis officia minima molestiae. Quia labore et eum voluptatem sunt et exercitationem. Molestiae et vitae natus pariatur est reprehenderit similique. Porro soluta rerum at.</p>
               <p>Aspernatur amet dicta mollitia. Consequatur qui dolores quo omnis exercitationem natus. Qui iusto quaerat vitae natus sed totam aperiam voluptate. Vel cum molestias esse qui dolor unde vel. Hic qui labore aut.</p>
-            </div>
+            {{/m.content}}
           {{/wu-modal}}
         {{/if}}
         {{#if showModal}}
-          {{#wu-modal title="a dialog" onClose=(action 'dismissModal')}}
-            <div class="modal-dialog__content">
+          {{#wu-modal title="A dialog example" onClose=(action 'dismissModal') as |m|}}
+            {{#m.content}}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dolore, cumque ex, amet beatae doloremque at? Quis libero ipsam illo consectetur sed aut dicta inventore eum deleniti repellendus, aliquid perferendis.
-            </div>
-            <div class="modal-dialog__buttons">
-              <a href="#" role="button" class="button modal-dialog__button" {{action (action 'doSomethingFromModal')}}>Call to action</a>
-              <a href="#" role="button" class="modal-dialog__button" {{action (action 'dismissModal')}}><i class="vi vi-cross vi-u-link"></i>Dismiss</a>
-            </div>
+            {{/m.content}}
+            {{#m.buttons as |b|}}
+              {{b.button label="Call to action" onClick=(action 'doSomethingFromModal')}}
+              {{b.button label="Dismiss" onClick=(action 'dismissModal') isLink=true icon="vi-cross"}}
+            {{/m.buttons}}
           {{/wu-modal}}
         {{/if}}
       </div>

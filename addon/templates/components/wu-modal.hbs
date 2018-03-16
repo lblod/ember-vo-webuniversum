@@ -6,17 +6,19 @@
           <div class="col--10-12">
             <h1 class="h3">{{title}}</h1>
           </div>
-          <div class="col--2-12 u-align-right">
+          <div class="col--2-12 u-align-right" {{action 'close'}}>
             <div class="anti-jitter">
-              <a class="link--icon--close" href="#" {{action 'close'}}>
+              <a class="link--icon--close" href="#">
                 <span class="u-visually-hidden">Venster sluiten</span>
               </a>
             </div>
           </div>
         </div>
       </div>
-      {{yield}}
+      {{yield (hash
+          content=(component 'wu-modal-content')
+          buttons=(component 'wu-modal-buttons')
+          )}}
     </div>
-  </div> 
+  </div>
 {{/ember-wormhole}}
-
