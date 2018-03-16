@@ -2,6 +2,7 @@
   {{yield (hash
       toggle=(component 'wu-popover-toggle' click=(action "toggle"))
       content=(component 'wu-popover-content')
+      close=(action "close")
       )}}
 {{/click-outside}}
 

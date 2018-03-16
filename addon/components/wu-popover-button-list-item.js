@@ -12,5 +12,6 @@ export default Component.extend({
   },
   click() {
     this.sendAction('onClick'); // eslint-disable-line ember/closure-actions
+    this.get('close')();
   }
 });

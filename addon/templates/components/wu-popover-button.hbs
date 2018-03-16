@@ -5,7 +5,7 @@
   {{#p.content}}
     <ul>
       {{yield (hash
-        item=(component 'wu-popover-button-list-item')
+        item=(component 'wu-popover-button-list-item' close=p.close)
           )}}
     </ul>
   {{/p.content}}

@@ -15,6 +15,7 @@ export default Component.extend({
   isAlignCenter: equal('align', 'center'),
 
   isOpen: false,
+
   actions: {
     close() {
       this.set('isOpen', false);
