@@ -23,6 +23,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
+    "ember-click-outside": "^0.1.12",
     "ember-wormhole": "^0.5.4"
   },
   "devDependencies": {

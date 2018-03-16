@@ -131,20 +131,6 @@
           <h4 class="h4">Anchor tag button</h4>
           {{wu-link-button isWarning=true label='Click me' onClick=(action "dummyClick")}}
         </div>
-        <h4 class="h4">button with popover</h4>
-        {{#popover-button title='Downloaden'}}
-          <ul class="popover__content">
-            <li>
-              <a class="popover__link" href="#">CSV file (excel)</a>
-            </li>
-            <li>
-              <a class="popover__link" href="#">JSON file</a>
-            </li>
-            <li>
-              <a class="popover__link" href="#">Turtle file</a>
-            </li>
-          </ul>
-        {{/popover-button}}
       </div>
     </section>
 
@@ -228,6 +214,32 @@
             </div>
           {{/wu-modal}}
         {{/if}}
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Popover</h2>
+        <h3 class="h3">Custom toggle</h3>
+        {{#wu-popover as |p|}}
+          {{#p.toggle}}
+            {{wu-icon ""}}
+            <button class="vi vi-u-badge vi-u-badge--grey vi-u-badge--small vi-question" type="button">
+              <span class="u-visually-hidden">Opties</span>
+            </button>
+          {{/p.toggle}}
+          {{#p.content}}
+            Popover content
+          {{/p.content}}
+        {{/wu-popover}}
+
+        <h3 class="h3">Button toggle</h3>
+        {{#wu-popover-button label="Downloaden" as |p|}}
+          {{p.item label="Lorem ipsum" onClick=(action "dummyClick")}}
+          {{p.item label="Test link" onClick=null}}
+          {{p.item label="Active link" onClick=(action "dummyClick")}}
+          {{p.item label="Dolor sit" onClick=(action "dummyClick")}}
+        {{/wu-popover-button}}
       </div>
     </section>
 

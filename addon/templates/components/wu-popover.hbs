@@ -1,0 +1,8 @@
+{{#click-outside action=(action "close")}}
+  {{yield (hash
+      toggle=(component 'wu-popover-toggle' click=(action "toggle"))
+      content=(component 'wu-popover-content')
+      )}}
+{{/click-outside}}
+
+{{yield}}
