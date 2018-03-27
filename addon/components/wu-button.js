@@ -16,10 +16,11 @@ export default Component.extend({
     'disabled',
     'isLoading:disabled'
   ],
-  classNames: ['button'],
+  classNames: [],
   classNameBindings: [
     'isAlt:button--alt',
     'isAltBlue:button--alt--blue',
+    'isButton:button',
     'isBlock:button--block',
     'isLarge:button--large',
     'isSmall:button--small',
@@ -44,6 +45,7 @@ export default Component.extend({
   isAlt: false,
   isBlue: false,
   isBlock: false,
+  isButton: false,
   isDark: false,
   isLink: false,
   isLoading: false,
