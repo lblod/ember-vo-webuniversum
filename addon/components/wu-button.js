@@ -45,7 +45,7 @@ export default Component.extend({
   isAlt: false,
   isBlue: false,
   isBlock: false,
-  isButton: false,
+  isButton: true,
   isDark: false,
   isLink: false,
   isLoading: false,
