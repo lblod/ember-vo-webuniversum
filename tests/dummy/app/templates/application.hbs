@@ -264,6 +264,65 @@
       </div>
     </section>
 
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Info tile</h2>
+        <div>
+          <h4 class="h4">Header only</h4>
+          {{wu-info-tile title="Info tile zonder badge en inhoud" subtitle="7 maart 2017"}}
+          {{wu-info-tile title="Info tile zonder badge en inhoud" subtitle="7 maart 2017" isAlt=true}}
+        </div>
+        <div>
+          <h4 class="h4">Info tile met inhoud</h4>
+          {{#wu-info-tile as |i|}}
+            {{i.header title="Info tile met inhoud" subtitle="7 maart 2017"}}
+            {{#i.content}}
+              <p><strong>Beslissingsbrief Studietoelage</strong></p>
+              <p>De studietoelage voor Broos Deprez werd toegekend.</p>
+            {{/i.content}}
+          {{/wu-info-tile}}
+        </div>
+        <div>
+          <h4 class="h4">Info tile met badge en inhoud</h4>
+          {{#wu-info-tile as |i|}}
+            {{#i.header title="Info tile met een badge en inhoud" subtitle="7 maart 2017"}}
+              {{wu-badge icon="vi-document-small" isAccent=true}}
+            {{/i.header}}
+            {{#i.content}}
+              <p><strong>Beslissingsbrief Studietoelage</strong></p>
+              <p>De studietoelage voor Broos Deprez werd toegekend.</p>
+            {{/i.content}}
+          {{/wu-info-tile}}
+        </div>
+        <div>
+          <h4 class="h4">Clickable info tile met badge en inhoud</h4>
+          {{#wu-info-tile onClick=(action "dummyClick") as |i|}}
+            {{#i.header title="Info tile met een badge en inhoud" subtitle="7 maart 2017"}}
+              {{wu-badge icon="vi-document-small" isAccent=true}}
+            {{/i.header}}
+            {{#i.content}}
+              <p><strong>Beslissingsbrief Studietoelage</strong></p>
+              <p>De studietoelage voor Broos Deprez werd toegekend.</p>
+            {{/i.content}}
+          {{/wu-info-tile}}
+        </div>
+        <div>
+          <h4 class="h4">Centered, large info tile</h4>
+          {{#wu-info-tile center=true size="large" as |i|}}
+            {{i.header title="Centered large info tile" icon="vi-tag"}}
+            {{#i.content}}
+              <p>beschrijvende text dat ook een <strong>highlight</strong> kan bevatten nibh ultricies ut justo odio.</p>
+            {{/i.content}}
+            {{#i.footer}}
+              {{wu-button label="Test" isBlock=true onClick=(action "dummyClick")}}
+            {{/i.footer}}
+          {{/wu-info-tile}}
+        </div>
+
+      </div>
+    </section>
+
+
   </div>
 </div>
 
