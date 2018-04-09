@@ -62,5 +62,6 @@
   "bugs": {
     "url": "https://github.com/lblod/ember-vo-webuniversum/issues"
   },
-  "homepage": "https://github.com/lblod/ember-vo-webuniversum#readme"
+  "homepage": "https://github.com/lblod/ember-vo-webuniversum#readme",
+  "license": "MIT"
 }
