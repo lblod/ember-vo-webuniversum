@@ -3,6 +3,16 @@ import Controller from '@ember/controller';
 export default Controller.extend({
   showModal: false,
   showSimpleModal: false,
+  contactInfo: {
+    adres: 'Nieuwstraat 45',
+    postcode: 4000,
+    gemeente: "Brussel",
+    land: "Belgie",
+    telephone: "+32031234567",
+    fax: "+32037654321",
+    email: "info@vlaanderen.be",
+    website: "http://vlaanderen.be"
+  },
   actions: {
     dummyClick() {
       window.alert('Click');

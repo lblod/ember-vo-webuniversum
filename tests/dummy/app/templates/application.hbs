@@ -58,8 +58,8 @@
         <div>
           <p>Selected dates: from {{fromDateValue}} to {{toDateValue}}</p>
           {{wu-date-range fromValue=fromDateValue toValue=toDateValue
-              fromPlaceholder='01.01.2018' toPlaceholder='31.12.2018'
-              fromMaxDate='08.03.2018'}}
+            fromPlaceholder='01.01.2018' toPlaceholder='31.12.2018'
+            fromMaxDate='08.03.2018'}}
         </div>
       </div>
     </section>
@@ -248,7 +248,7 @@
       <div class="layout layout--wide">
         <h2 class="h2">Document miniature</h2>
         {{wu-document-miniature type="JSON" label="JSON: voor spreadsheet editors zoals Excel of Numbers."
-            metadata="JSON - 1.4MB" onClick=(action "dummyClick")}}
+          metadata="JSON - 1.4MB" onClick=(action "dummyClick")}}
       </div>
     </section>
 
@@ -323,7 +323,29 @@
       </div>
     </section>
 
-
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Contact Card</h2>
+        <div>
+          {{#contact-card as |c|}}
+            {{#c.header}}Contactgegevens{{/c.header}}
+            {{#c.content contactInfo=contactInfo as |content|}}
+              {{content.address}}
+              {{content.telephone}}
+              {{content.fax}}
+              {{content.email}}
+              {{content.website}}
+              {{#content.row label="Extra"}}
+                some extra information
+              {{/content.row}}
+              {{#content.row label="Extra 2"}}
+                even more information
+              {{/content.row}}
+            {{/c.content}}
+          {{/contact-card}}
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 
