@@ -3,11 +3,12 @@
     <label for="datepicker-from" class="date-range__label">{{fromLabel}}</label>
     <div class="date-range__datepicker datepicker">
       {{wu-datepicker-input
-          class="input-field input-field--block"
-          value=fromValue
-          placeholder=fromPlaceholder
-          minDate=fromMinDate
-          maxDate=fromMaxDate
+        class="input-field input-field--block"
+        rawValue=fromValue
+        placeholder=fromPlaceholder
+        minDate=fromMinDate
+        maxDate=fromMaxDate
+        dateFormat=dateFormat
       }}
     </div>
   </div>
@@ -16,11 +17,12 @@
     <label for="datepicker-to" class="date-range__label">{{toLabel}}</label>
     <div class="date-range__datepicker datepicker">
       {{wu-datepicker-input
-          class="input-field input-field--block"
-          value=toValue
-          placeholder=toPlaceholder
-          minDate=toMinDate
-          maxDate=toMaxDate
+        class="input-field input-field--block"
+        rawValue=toValue
+        placeholder=toPlaceholder
+        minDate=toMinDate
+        maxDate=toMaxDate
+        dateFormat=dateFormat
       }}
     </div>
   </div>

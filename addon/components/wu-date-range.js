@@ -3,6 +3,7 @@ import layout from '../templates/components/wu-date-range';
 
 export default Component.extend({
   layout,
+  dateFormat: 'DD.MM.YYYY',
   tagName: 'form',
   classNames: ['form'],
   fromLabel: 'van',

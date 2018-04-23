@@ -12,6 +12,7 @@ export default Component.extend({
   layout,
   tagName: 'form',
   classNames: ['form'],
+  dateFormat: 'DD.MM.YYYY',
 
   /**
    * Placeholder of the datepicker input field
@@ -30,21 +31,19 @@ export default Component.extend({
    * @type string
    * @public
   */
-  minDate: null, // DD.MM.YYYY
+  minDate: null,
 
   /**
    * Maximal date of the datepicker input field
-   * Format: DD.MM.YYYY
    *
    * @property maxDate
    * @type string
    * @public
   */
-  maxDate: null, // DD.MM.YYYY
+  maxDate: null,
 
   /**
    * Current selected value in the datepicker
-   * Format: DD.MM.YYYY
    *
    * @property value
    * @type string

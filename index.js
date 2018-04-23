@@ -3,7 +3,7 @@
 module.exports = {
   name: '@lblod/ember-vo-webuniversum',
   included: function included(app) {
-    this._super.included(app);
+    this._super.included.apply(this, app);
     app.import('vendor/lblod/main.css');
     app.import('vendor/lblod/prototype.css');
     app.import('vendor/lblod/styleguide.css');

@@ -24,7 +24,8 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-click-outside": "^0.1.12",
-    "ember-wormhole": "^0.5.4"
+    "ember-wormhole": "^0.5.4",
+    "ember-cli-moment-shim": "~3.7.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
