@@ -29,9 +29,12 @@ export default TextField.extend({
   },
   value: computed('rawValue', {
     set(key, value){
-      let date = moment(value, this.get('dateFormat')).toDate();
-      this.set('rawValue', date);
-      return moment(date).format(this.get('dateFormat'));
+      let date = moment(value, this.get('dateFormat'));
+      if(date.isValid())
+        this.set('rawValue', date.toDate());
+      else
+        this.set('rawValue', undefined);
+      return value;
     },
     get(){
       if(this.get('rawValue')){
