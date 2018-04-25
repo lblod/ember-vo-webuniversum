@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
   showModal: false,
   showSimpleModal: false,
-  contactInfo: {
+  contactInfo: { // eslint-disable-line ember/avoid-leaking-state-in-ember-objects
     adres: 'Nieuwstraat 45',
     postcode: 4000,
     gemeente: "Brussel",
