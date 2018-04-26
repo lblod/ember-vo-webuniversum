@@ -23,23 +23,27 @@ export default TextField.extend({
   maxDate: null,
   rawValue: null,
   dateFormat: 'DD.MM.YYYY',
+  didReceiveAttrs(){
+    if(this.get('rawValue')){
+      let date = moment(this.get('rawValue'));
+      if(date.isValid()){
+        this.set('value', date.format(this.get('dateFormat')));
+        return;
+      }
+    }
+    this.set('value', undefined);
+  },
   didInsertElement() {
     this._super(...arguments);
     vl.datepicker.dress(this.element);
   },
-  value: computed('rawValue', {
-    set(key, value){
-      let date = moment(value, this.get('dateFormat'));
-      if(date.isValid())
-        this.set('rawValue', date.toDate());
-      else
-        this.set('rawValue', undefined);
-      return value;
-    },
-    get(){
-      if(this.get('rawValue')){
-        return moment(this.get('rawValue')).format(this.get('dateFormat'));
-      }
+  focusOut(){
+    let date = moment(this.get('value'), this.get('dateFormat'));
+    if(date.isValid()){
+      this.set('rawValue', date.toDate());
+      this.set('value', date.format(this.get('dateFormat')));
+      return;
     }
-  })
+    this.set('rawValue', undefined);
+  }
 });
