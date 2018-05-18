@@ -4,7 +4,7 @@ import layout from '../templates/components/wu-modal';
 export default Component.extend({
   layout,
   classNameBindings: [
-    'isVisible:overlay:overlay--hidden'
+    'isVisible:modal-overlay:modal-overlay--hidden'
   ],
   title: null,
   destinationId: null,
