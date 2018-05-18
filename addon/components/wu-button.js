@@ -39,7 +39,7 @@ export default Component.extend({
   command: null,
   commandLocation: null, // null, below or inside
   commandLocationClass: computed('commandLocation', function() {
-    return this.get('commandLocation') ? `button__command--${this.get('commandLocation')}` : '';
+    return this.get('commandLocation') ? `button__info--${this.get('commandLocation')}` : '';
   }),
   disabled: false,
   isAlt: false,
