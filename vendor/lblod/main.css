@@ -1746,6 +1746,9 @@ p.uppercase {
   dt.contact-card__data__title {
     display: block !important; } }
 
+.u-white-space--none {
+  white-space: nowrap; }
+
 /* ==========================================================================
   accordion
   Style the accordion here.
@@ -1795,6 +1798,12 @@ p.uppercase {
  ========================================================================== */
 .badge--l.badge--icon .fa {
   font-size: 2.5rem; }
+
+i.vi-u-badge--xsmall.vi-check:before {
+  font-size: 0.8rem; }
+
+i.vi-u-badge--xsmall.vi-cross:before {
+  font-size: 1rem; }
 
 /* ==========================================================================
   content card
