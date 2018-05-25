@@ -25,7 +25,7 @@ export default TextField.extend({
   dateFormat: 'DD.MM.YYYY',
   didReceiveAttrs(){
     if(this.get('rawValue')){
-      let date = moment(this.get('rawValue'));
+      let date = moment.utc(this.get('rawValue'));
       if(date.isValid()){
         this.set('value', date.format(this.get('dateFormat')));
         return;
@@ -38,7 +38,7 @@ export default TextField.extend({
     vl.datepicker.dress(this.element);
   },
   focusOut(){
-    let date = moment(this.get('value'), this.get('dateFormat'));
+    let date = moment.utc(this.get('value'), this.get('dateFormat'));
     if(date.isValid()){
       this.set('rawValue', date.toDate());
       this.set('value', date.format(this.get('dateFormat')));
