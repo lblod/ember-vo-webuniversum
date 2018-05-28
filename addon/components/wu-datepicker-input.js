@@ -25,7 +25,7 @@ export default TextField.extend({
   dateFormat: 'DD.MM.YYYY',
   didReceiveAttrs(){
     if(this.get('rawValue')){
-      let date = moment.utc(this.get('rawValue'));
+      let date = moment(this.get('rawValue'));
       if(date.isValid()){
         this.set('value', date.format(this.get('dateFormat')));
         return;
