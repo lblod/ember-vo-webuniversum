@@ -7,6 +7,9 @@ module.exports = {
     app.import('vendor/lblod/main.css');
     app.import('vendor/lblod/prototype.css');
     app.import('vendor/lblod/styleguide.css');
+    app.import('node_modules/postscribe/dist/postscribe.js', {
+      using: [{ transformation: 'amd', as: 'postscribe' }]
+    });
   },
   contentFor: function(type, config) {
     let version = '2.latest';
