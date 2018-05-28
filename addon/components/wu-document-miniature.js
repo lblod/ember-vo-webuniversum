@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import { assert } from '@ember/debug';
 import layout from '../templates/components/wu-document-miniature';
 
 export default Component.extend({

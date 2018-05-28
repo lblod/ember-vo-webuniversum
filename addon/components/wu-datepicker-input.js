@@ -1,6 +1,5 @@
 import TextField from '@ember/component/text-field';
 import layout from '../templates/components/wu-datepicker-input';
-import { computed } from '@ember/object';
 import moment from 'moment';
 
 /* global vl */
