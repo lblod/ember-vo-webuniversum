@@ -22,7 +22,7 @@ module.exports = {
 `;
     } else if (type === 'body'){
       return `<script src="//dij151upo6vad.cloudfront.net/${version}/js/vlaanderen-ui.js" type="text/javascript"></script>\n` +
-        '<div id="ember-vo-webunivserum-wormhole"></div>';
+        '<div id="ember-vo-webuniversum-wormhole"></div>';
     } else {
       return '';
     }
