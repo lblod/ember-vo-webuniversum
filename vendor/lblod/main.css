@@ -452,6 +452,21 @@ button.button.button--disabled {
   button.button.button--disabled:hover {
     pointer-events: none; }
 
+a.button.button--overflow-hidden, a.button.button--alt.button--overflow-hidden, a.button.button--small.button--overflow-hidden, a.button.button--tiny.button--overflow-hidden,
+button.button.button--overflow-hidden,
+button.button.button--alt.button--overflow-hidden,
+button.button.button--small.button--overflow-hidden,
+button.button.button--tiny.button--overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis; }
+  a.button.button--overflow-hidden.button--block, a.button.button--alt.button--overflow-hidden.button--block, a.button.button--small.button--overflow-hidden.button--block, a.button.button--tiny.button--overflow-hidden.button--block,
+  button.button.button--overflow-hidden.button--block,
+  button.button.button--alt.button--overflow-hidden.button--block,
+  button.button.button--small.button--overflow-hidden.button--block,
+  button.button.button--tiny.button--overflow-hidden.button--block {
+    padding: 0 0.5rem; }
+
 button.button--link,
 button,
 a {
@@ -1118,6 +1133,13 @@ label.label--subtle {
   font-size: 1.5rem;
   color: #666666; }
 
+.form__label--block {
+  display: block; }
+
+.form__label--large {
+  font-size: 2rem;
+  margin-bottom: 0.5rem; }
+
 /* Icons
  ========================================================================== */
 .input-field-icon-container--left,
@@ -1435,6 +1457,10 @@ i.input-field__icon {
 .grid > * {
   transition: all 200ms; }
 
+.grid--align-right {
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end; }
+
 /* Equal height
  ========================================================================== */
 .grid.grid--equal-height > [class^="col--"] {
@@ -1486,6 +1512,15 @@ tr.data-table__row-active {
 table.data-table.data-table--gray-head thead tr {
   background-color: #E8EBEE;
   border-bottom: 1px solid #CBD2DA; }
+
+.data-table--tight th,
+.data-table--tight td {
+  font-size: 1.5rem;
+  padding: 1rem 0.8rem; }
+
+.data-table--collapse-left th,
+.data-table--collapse-left td {
+  padding: 1rem 0.8rem 1rem 0; }
 
 .data-table--tight th,
 .data-table--tight td {
@@ -1554,9 +1589,6 @@ tr.tr-expand {
 
 .data-table__actions--bottom {
   border-top: 1px solid #CBD2DA; }
-
-.data-table tbody tr:last-child {
-  border-bottom: none !important; }
 
 table.data-table.data-table--blocks {
   overflow-x: hidden;
@@ -1814,6 +1846,14 @@ i.vi-u-badge--xsmall.vi-cross:before {
   .contact-card--white .contact-card__content,
   .contact-card--white .content-header__actions {
     background-color: #fff; }
+
+/* ==========================================================================
+  datepicker
+  Style the datepicker here.
+ ========================================================================== */
+div[class^="col--"] > .date-range__datepicker {
+  width: 100%;
+  display: block; }
 
 /* ==========================================================================
   Document miniature
@@ -2367,6 +2407,9 @@ ul.preview-list .preview-list__name {
   Modals
   Style modals here.
  ========================================================================== */
+.modal-dialog {
+  z-index: 1005; }
+
 /* small modal
  ========================================================================== */
 .modal-dialog.modal-dialog--small {
@@ -2381,7 +2424,7 @@ ul.preview-list .preview-list__name {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 800;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.8); }
 
 .modal-dialog.modal-dialog--wide {
@@ -2397,7 +2440,7 @@ ul.preview-list .preview-list__name {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 800; }
+  z-index: 1000; }
 
 /* Sectioned modal
  ========================================================================== */
@@ -2644,6 +2687,12 @@ ul.preview-list .preview-list__name {
     top: 0.5rem;
     position: relative; }
 
+.sidebar--slide.sidebar--slide--right {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid #E8EBEE; }
+
 .sidebar--slide.sidebar--slide--wide {
   width: 50vw !important;
   max-width: 80rem; }
@@ -2669,6 +2718,10 @@ nav.sidebar--slide.sidebar--slide--in {
     min-height: none; }
   nav.sidebar--slide.sidebar--slide--in .side-navigation__group {
     padding-top: 0; }
+
+nav.sidebar--slide.sidebar--slide--in.sidebar--slide--right {
+  right: -31rem;
+  left: auto; }
 
 section.drilldown__subcolumn.drilldown__subcolumn--active {
   left: 0; }
@@ -3176,10 +3229,14 @@ span.u-visible--desktop-up {
     .u-visible-mobile {
       display: block !important; } }
 
-span.u-visible--s, span.u-visible-mobile {
+span.u-visible--s, span.u-visible-mobile,
+.button.u-visible--s,
+.button.u-visible-mobile {
   display: none !important; }
   @media (max-width: 766px) {
-    span.u-visible--s, span.u-visible-mobile {
+    span.u-visible--s, span.u-visible-mobile,
+    .button.u-visible--s,
+    .button.u-visible-mobile {
       display: inline-block !important; } }
 
 th.u-visible--s, th.u-visible-mobile,
