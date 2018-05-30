@@ -1,6 +1,5 @@
 import TextField from '@ember/component/text-field';
 import layout from '../templates/components/wu-datepicker-input';
-import { computed } from '@ember/object';
 import moment from 'moment';
 
 /* global vl */
@@ -25,7 +24,7 @@ export default TextField.extend({
   dateFormat: 'DD.MM.YYYY',
   didReceiveAttrs(){
     if(this.get('rawValue')){
-      let date = moment.utc(this.get('rawValue'));
+      let date = moment(this.get('rawValue'));
       if(date.isValid()){
         this.set('value', date.format(this.get('dateFormat')));
         return;

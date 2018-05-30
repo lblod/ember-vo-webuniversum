@@ -11,7 +11,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     if (!this.get('destinationId'))
-      this.set('destinationId', 'ember-vo-webunivserum-wormhole');
+      this.set('destinationId', 'ember-vo-webuniversum-wormhole');
   },
   close() {
     this.set('isVisible', false);
