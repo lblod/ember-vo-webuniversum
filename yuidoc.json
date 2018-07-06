@@ -1,7 +1,7 @@
 {
   "name": "@lblod/ember-vo-webuniversum",
   "description": "Ember addon wrapping the webuniversum components of Vlaanderen",
-  "version": "0.13.5",
+  "version": "0.13.6",
   "options": {
     "paths": [
       "addon"
