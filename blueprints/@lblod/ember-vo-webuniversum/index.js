@@ -1,5 +1,5 @@
 /* eslint-env node */
-var EmberRouterGenerator = require('ember-router-generator');
+import EmberRouterGenerator from 'ember-router-generator';
 
 module.exports = {
   description: '',
