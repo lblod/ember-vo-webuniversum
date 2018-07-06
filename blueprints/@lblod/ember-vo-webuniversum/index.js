@@ -4,6 +4,7 @@ const path = require('path');
 
 module.exports = {
   description: '',
+  normalizeEntityName: function() {},
   async afterInstall(options) {
     const source = path.join(options.project.root, 'app', 'router.js');
     const routes = new EmberRouterGenerator(source);
