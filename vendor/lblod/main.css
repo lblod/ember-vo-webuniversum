@@ -2207,7 +2207,7 @@ div[class^="col--"] > .date-range__datepicker {
   display: block;
   position: relative; }
 
-.u-hr--label label {
+.u-hr--label span {
   position: absolute;
   top: -1.3rem;
   font-size: 1.6rem;
