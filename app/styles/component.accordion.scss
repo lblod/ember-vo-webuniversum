@@ -1,0 +1,16 @@
+/* ==========================================================================
+  accordion
+  Style the accordion here.
+ ========================================================================== */
+
+.accordion__content {
+	line-height: 1.4;
+}
+
+.js-accordion .accordion__content {
+	display: none;
+}
+
+.js-accordion--open .accordion__content {
+	display: block;
+}

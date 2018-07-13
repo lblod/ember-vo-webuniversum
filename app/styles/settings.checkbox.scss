@@ -1,0 +1,47 @@
+// /* ==========================================================================
+//   Checkboxes
+//   Define alternative checkboxes here.
+//  ========================================================================== */
+
+/* Small switch checkbox
+ ========================================================================== */
+
+.checkbox--switch__wrapper {
+	display: inline-block;
+}
+
+.checkbox--switch__wrapper.checkbox--switch--small {
+	font-size: 0.8em;
+
+	.checkbox--switch+.checkbox--switch__label {
+		height: 1.1rem;
+		width: 2.5rem;
+
+		&:after {
+			width: 1.45rem;
+			height: 1.5rem;
+		}
+	}
+}
+
+// /* Star checkbox
+//  ========================================================================== */
+
+.checkbox.checkbox--star {
+	.checkbox__toggle + span {
+		color: $blue-gray-light;
+		border: none;
+		background: transparent;
+		overflow: visible;
+		line-height: 1;
+
+		&:before {
+			background-color: transparent;
+			color: transparent;
+		}
+	}
+
+	.checkbox__toggle:checked + span {
+		color: darken($primary-yellow, 12%);
+	}
+}

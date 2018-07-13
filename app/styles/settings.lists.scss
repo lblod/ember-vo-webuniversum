@@ -1,0 +1,340 @@
+/* ==========================================================================
+  Lists
+  Define alternative lists here.
+ ========================================================================== */
+
+/* Ordered list
+ ========================================================================== */
+
+.inline-list li {
+	display: inline-block;
+	padding-right: 1.5rem;
+	margin-right: 0.8rem;
+	vertical-align: top;
+}
+
+.inline-list.inline-list--bordered li {
+	border-right: 1px solid $blue-gray-light;
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+ul,
+ol {
+	&.bullet-list {
+		list-style: disc;
+		margin-left: 2rem;
+	}
+
+	&.bullet-list--spaced > li {
+		margin-bottom: 1rem;
+	}
+
+	&.bullet-list--spaced--small > li {
+		margin-bottom: 0.5rem;
+	}
+
+	&.bullet-list--spaced--tiny > li {
+		margin-bottom: 0.2rem;
+	}
+}
+
+
+.editor__paper ul.article-list ul,
+.editor__paper ul.bullet-list ul {
+	margin-top: 0.5rem;
+}
+
+.editor__paper ul.bullet-list ul > li {
+	margin-left: 2rem;
+	list-style-type: circle;
+}
+
+.editor__paper ul.article-list ul > li {
+	margin-left: 12rem;
+	list-style-type: circle;
+}
+
+ul,
+ol {
+	&.numbered-list {
+		list-style-type: lower-alpha;
+		margin: 0 0 1rem 2rem;
+	}
+
+	&.numbered-list li {
+		list-style-type: decimal;
+		margin-bottom: 0.5em;
+	}
+}
+
+ul,
+ol {
+	&.dashed-list {
+		margin: 0 0 1rem 1rem;
+	}
+
+	&.dashed-list li {
+		position: relative;
+		padding-left: 2rem;
+
+		&:before {
+			display: block;
+			content: "-";
+			margin-right: 1rem;
+			position: absolute;
+			left: 0rem;
+			top: 0.1rem;
+		}
+	}
+}
+
+ul,
+ol {
+	&.alphabet-list {
+		list-style-type: lower-alpha;
+		margin: 0 0 1rem 2rem;
+	}
+
+	&.alphabet-list li {
+		margin-bottom: 0.5em;
+	}
+}
+
+ul,
+ol {
+	&.clickable-list li {
+		padding-left: 4rem;
+		margin-bottom: 0.6rem;
+	}
+
+	&.clickable-list li a {
+		position: absolute;
+		left: 0;
+	}
+}
+
+ul,
+ol {
+	&.icon-list li {
+		padding-left: 4rem;
+		margin-bottom: 0.6rem;
+	}
+
+	&.icon-list li .annotation--agendapunt--open__icon,
+	&.icon-list li .annotation--agendapunt--besloten__icon {
+		position: absolute;
+		left: 0;
+		padding: 0 1px;
+	}
+
+	&.icon-list li .annotation--agendapunt--open__icon {
+		color: $gray-light;
+	}
+
+	&.icon-list li .annotation--agendapunt--besloten__icon {
+		color: darken($primary-yellow, 15%);
+	}
+}
+
+ul,
+ol {
+	&.article-list > li {
+		margin-bottom: 0.6rem;
+
+		span.article-number {
+			position: absolute;
+			left: 0;
+		}
+
+		span.article-content {
+			margin-left: 10rem;
+			display: block;
+		}
+	}
+}
+
+// ul,
+// ol {
+// 	&.article-list > li {
+// 		counter-increment: step-counter-besluit;
+// 		position: relative;
+// 		padding-left: 9rem;
+// 		margin-bottom: 1rem;
+
+// 		&:before {
+// 			content: counter(step-counter-besluit);
+// 			margin-right: 1rem;
+// 			position: absolute;
+// 			left: 5.5rem;
+// 			top: 0.1rem;
+// 		}
+
+// 		&:after {
+// 			content: "Artikel";
+// 			position: absolute;
+// 			left: 0;
+// 			top: 0.1rem;
+// 		}
+// 	}
+// }
+
+.search-box__results {
+	max-height: 40vh;
+	overflow: scroll;
+
+	li {
+		padding: 0.5rem 1.5rem;
+		font-size: 1.6rem;
+
+		&:hover {
+			background-color: $blue-gray-lightest;
+			cursor: pointer;
+			color: $primary-blue;
+		}
+
+		&:first-child {
+			padding-top: 0.7rem;
+		}
+
+		&:last-child {
+			padding-bottom: 0.7rem;
+		}
+	}
+}
+
+ul.preview-list {
+	min-height: 30rem;
+	overflow-y: auto;
+	overflow-x: none;
+	padding: 3rem 1.5rem;
+
+	li {
+		display: inline-block;
+		cursor: pointer;
+
+		&:hover {
+			.preview-list__image {
+				box-shadow: 0 0 6px 0 $primary-blue;
+			}
+
+			.preview-list__name {
+				color: $primary-blue;
+			}
+		}
+	}
+
+	.preview-list__image {
+		width: 16rem;
+		height: 20rem;
+		display: block;
+		box-shadow: 0 0 6px 0 $blue-gray-light;
+		overflow: hidden;
+	}
+
+	.preview-list__name {
+		display: block;
+		padding: 1rem 0;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+	}
+}
+
+// ol.bullet-list--ordered {
+// 	list-style-type: lower-alpha;
+// 	margin: 0 0 1rem 2rem;
+// }
+
+// ol.bullet-list--ordered li {
+// 	list-style-type: decimal;
+// 	margin-bottom: 0.5em;
+// }
+
+/* Temporary list problem
+ ========================================================================== */
+
+.side-navigation {
+	font-size: 1.6rem;
+}
+
+.side-navigation__item > ul {
+	display: block !important;
+	font-size: 95%;
+
+	&.side-navigation__group {
+	padding-top: 0;
+	}
+}
+
+
+
+/* Modal
+ ========================================================================== */
+
+ul,
+ol {
+
+	&.annotation-info li {
+		margin-bottom: 1rem;
+	}
+
+	dl {
+		margin-bottom: 2rem;
+	}
+
+	dl dd,
+	dl dt {
+		margin-bottom: 0.5rem;
+		line-height: 1.2;
+	}
+
+	.annotation-info__item	.annotation-info dl dd,
+	.annotation-info__item	.annotation-info dl dt {
+		margin-bottom: 0;
+		line-height: 1.2;
+		font-size: 1.4rem;
+	}
+}
+
+dl.aanwezigen-lijst {
+	margin-top: 2rem !important;
+
+	.properties__label {
+		width: 20%;
+		padding-bottom: 0;
+	}
+	.properties__data {
+		width: 80%;
+		padding-bottom: 0.1rem;
+		line-height: 2rem;
+	}
+
+	.dynamic-label__input {
+		padding-top: 0.5rem;
+	}
+
+	.icon-container {
+		.input-field {
+			padding-left: 3.5rem;
+			margin-bottom: 1rem;
+		}
+
+		.input-field__icon {
+			top: 0.55rem;
+			left: 1rem;
+		}
+	}
+}
+
+.grid dl.aanwezigen-lijst {
+	margin-top: 2rem !important;
+
+	.properties__label {
+		width: 100%;
+	}
+	.properties__data {
+		width: 100%;
+	}
+}

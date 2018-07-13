@@ -1,0 +1,342 @@
+/* ==========================================================================
+  tables
+  Redefine tables here.
+ ========================================================================== */
+
+.data-table--nowrap table.data-table th,
+table.data-table.data-table--nowrap th {
+	white-space: nowrap;
+}
+
+.data-table--zebra tbody tr:nth-child(odd).data-table__row-active,
+tr.data-table__row-active {
+	background-color: $blue-gray-lighter;
+
+	td:first-child {
+		box-shadow: inset 4px 0 0 $primary-blue;
+	}
+}
+
+table.data-table.data-table--gray-head {
+	thead tr {
+		background-color: $blue-gray-lighter;
+		border-bottom: 1px solid $blue-gray-light;
+	}
+}
+
+// /* Tighter tables
+//  ========================================================================== */
+
+.data-table--tight {
+	th,
+	td {
+		font-size: 1.5rem;
+		padding: 1rem 0.8rem;
+	}
+}
+
+// TODO: put in styleguide
+.data-table--collapse-left {
+	th,
+	td {
+		padding: 1rem 0.8rem 1rem 0;
+	}
+}
+
+// /* Bordered
+//  ========================================================================== */
+
+.data-table--tight {
+	th,
+	td {
+		font-size: 1.5rem;
+		padding: 1rem 0.8rem;
+	}
+}
+
+// /* Nested tables
+//  ========================================================================== */
+
+tr.tr-expand {
+	background-color: $blue-gray-lighter;
+	transition: all 200ms;
+	min-height: 1px;
+	height: auto;
+
+	&.u-hidden {
+		height: 0;
+		overflow: hidden;
+	}
+
+	td:first-child {
+		position: relative;
+	}
+
+	td:first-child:after {
+		display: block;
+		content: "";
+		width: 1.5rem;
+		height: 1.5rem;
+		border-left: 1px solid $blue-gray-light;
+		border-bottom: 1px solid $blue-gray-light;
+
+		position: absolute;
+		top: 0.5rem;
+		left: 1.4rem;
+		bottom: 1rem;
+	}
+}
+
+/* Table in editor
+ ========================================================================== */
+
+.editor__paper table th {
+  white-space: initial;
+}
+
+.editor__paper .data-table th,
+.editor__paper .data-table td {
+  font-size: 1.4rem;
+}
+
+
+
+/* Expandable table header
+ ========================================================================== */
+
+.data-table__thead-capped__content {
+  display: block;
+  max-height: 3.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 200ms;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.data-table thead:hover .data-table__thead-capped__content {
+  max-height: 20rem;
+  overflow: visible;
+  transition: all 200ms;
+  display: block; /* to make sure the transition actually happens */
+
+  -webkit-line-clamp: initial;
+}
+
+// TODO: put in styleguide
+
+
+// /* Actions
+//  ========================================================================== */
+
+.data-table__actions {
+	padding: 1rem;
+
+	.data-table__action__toggle {
+		background-color: $white;
+	}
+
+	&.data-table__actions--top,
+	&.data-table__actions--bottom {
+		margin: 0 !important;
+	}
+}
+
+.data-table__actions--top {
+	border-bottom: 1px solid $blue-gray-light;
+}
+
+.data-table__actions--bottom {
+	border-top: 1px solid $blue-gray-light;
+}
+
+// /*
+//  ========================================================================== */
+
+
+
+// .data-table__search-result {
+// 	font-weight: 600;
+// }
+
+// .data-table tbody a {
+// 	text-decoration: none;
+// 	color: $gray-dark;
+// }
+
+// .documents-overview .data-table tbody tr td:last-child {
+// 	min-width: 10rem;
+// 	text-align: right;
+
+// 	.pill {
+// 		margin-right: 2.5rem;
+// 	}
+// }
+
+
+// .editor__paper table.data-table {
+// 	margin-top: 1rem;
+// 	border: 1px solid $gray-lighter;
+// 	width: 100%;
+
+// 	tbody,
+// 	thead,
+// 	tr {
+// 	}
+
+// 	thead tr.data-table__header {
+// 		width: 100%;
+// 		display: block;
+// 	}
+// }
+
+// .editor__paper table.data-table.data-table--lined th,
+// .editor__paper table.data-table.data-table--lined td {
+// 	font-size: 1.4rem;
+// 	padding: 0.6rem;
+// }
+
+// tr.u-border-none td {
+// 	padding-bottom: 0;
+// }
+
+// /* Rows
+//  ========================================================================== */
+
+// .documents-overview .data-table__alternating-rows tbody tr[data-table-selectable]:nth-child(odd) {
+// 	background-color: lighten($blue-gray-lightest, 2%);
+// }
+
+// .documents-overview .data-table tbody tr[data-table-selectable]:hover a {
+// 	color: $primary-blue;
+// }
+
+// .documents-overview .data-table {
+// 	display: flex;
+// 	flex: 1;
+// 	flex-direction: column;
+// }
+
+// .documents-overview .data-table thead tr {
+// 	width: 100%;
+// }
+
+// .documents-overview .data-table tbody {
+// 	overflow: scroll;
+// }
+
+// .navigate-content {
+// 	.documents-overview table.data-table,
+// 	.documents-overview [data-table] {
+// 		width: 100%;
+// 		overflow-x: hidden;
+// 		overflow-y: auto;
+// 		tbody {
+// 			display: table;
+// 		}
+// 	}
+// }
+
+// /* Blocks datatables
+//  ========================================================================== */
+
+// .navigate-content {
+// 	.data-table__actions.data-table__actions--bottom {
+// 		border-right: 1px solid $blue-gray-lighter;
+// 		border-top: 1px solid $blue-gray-lighter;
+// 	}
+// }
+
+table.data-table.data-table--blocks {
+	overflow-x: hidden;
+	border-right: 1px solid $blue-gray-lighter;
+
+	tbody {
+		width: calc(100% + 1px);
+	}
+
+	td {
+		padding: 2rem 1rem;
+
+		p {
+			font-size: 1.3rem;
+			line-height: 1.6;
+		}
+
+		&:first-child {
+			padding-left: 2rem;
+		}
+
+		&:last-child {
+			padding-right: 2.5rem;
+		}
+	}
+
+	tr {
+		border-bottom-color: rgba($blue-gray-light, 0.8);
+		background-color: $white;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $blue-gray-lightest;
+
+			td:first-child {
+				box-shadow: inset 0.5rem 0 0 $primary-blue;
+			}
+		}
+
+		&.data-table__element--active {
+			background-color: $primary-blue;
+			color: $white;
+			border-bottom-color: transparent;
+			box-shadow: inset 2px 4px 5px rgba($black, 0.1);
+
+			a.link--icon.link--disabled,
+			a.link--icon.link--disabled .vi {
+				color: rgba($white, 0.7);
+			}
+
+			a,
+			a .vi {
+				color: $white;
+			}
+		}
+	}
+
+	tr.data-table__element--active	+ tr {
+		box-shadow: inset 2px 4px 5px rgba($black, 0.1);
+	}
+
+	a.link--icon {
+		font-size: 1.4rem;
+
+		.vi {
+			top: 0.2rem;
+			padding-right: 0.1rem;
+			color: $primary-blue;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.link--disabled {
+			color: $gray;
+			cursor: default;
+
+			.vi {
+				color: $gray;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:last-child {
+			padding-right: none;
+		}
+	}
+}

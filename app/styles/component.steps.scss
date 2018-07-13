@@ -1,0 +1,25 @@
+/* ==========================================================================
+  steps
+  Style the steps here.
+ ========================================================================== */
+
+.step.step--no-box  {
+	border: 0;
+	padding: 1.2rem 0 1rem 0;
+
+	&.step--disabled {
+		background-color: transparent;
+		color: $gray;
+
+		.step__header {
+			opacity: 0.8;
+		}
+	}
+
+	.step__wrapper {
+		&:after,
+		&:before {
+			content: normal;
+		}
+	}
+}

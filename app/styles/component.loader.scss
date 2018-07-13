@@ -1,0 +1,14 @@
+/* ==========================================================================
+  loader
+  Style the loader here.
+ ========================================================================== */
+
+.loader-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: calc(50% - 3rem);
+	text-align: center;
+	padding: 1rem;
+}

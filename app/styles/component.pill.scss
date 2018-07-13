@@ -1,0 +1,89 @@
+/* ==========================================================================
+  Pill
+  Define alternative pills here.
+ ========================================================================== */
+
+/* pill with color and label
+ ========================================================================== */
+
+// TODO: check or adaptions are needed for pill
+
+.pill--white {
+	background-color: white;
+
+	.pill__close {
+		color: $gray;
+	}
+
+	&:hover .pill__close {
+		color: $primary-blue;
+	}
+}
+
+.pill--closable:hover {
+	color: $primary-blue;
+	cursor: pointer;
+	background-color: $blue-gray-lightest;
+}
+
+.pill--gray-light,
+.pill--gray,
+.pill--gray-dark,
+.pill--primary-blue,
+.pill--primary-yellow,
+.pill--red,
+.pill--green,
+.pill--orange {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 0;
+	position: relative;
+	white-space: nowrap;
+	padding-right: 10px;
+
+	&:after {
+		content:"";
+		display: block;
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		bottom: -1px;
+		width: 5px;
+	}
+}
+
+
+// Concept
+.pill--gray-light:after{
+	background-color: $gray-light;
+}
+
+.pill--gray:after{
+	background-color: $gray;
+}
+
+// Goedgekeurd
+.pill--gray-dark:after{
+	background-color: $gray-dark;
+}
+
+// Notulen publiek
+.pill--primary-blue:after{
+	background-color: $primary-blue;
+}
+
+// Agenda publiek
+.pill--primary-yellow:after{
+	background-color: $primary-yellow;
+}
+
+.pill--red:after{
+	background-color: $red-light;
+}
+
+.pill--orange:after{
+	background-color: $orange;
+}
+
+.pill--green:after{
+	background-color: $green;
+}
