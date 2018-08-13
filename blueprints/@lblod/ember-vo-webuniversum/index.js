@@ -18,7 +18,6 @@ module.exports = {
       console.log('No router.js found, skipping route-not-found');
     }
 
-    this.addPackageToProject('postscribe', '^2.0.8');
     //This will follow major versions until 4
     return this.addAddonToProject('ember-cli-moment-shim', '~3.7.1');
   }
