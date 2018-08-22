@@ -149,34 +149,6 @@ p.uppercase {
 // /* Capping content
 //  ========================================================================== */
 
-.text-overflow-ellipsis {
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-
-	a,
-	p,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		width: 100%;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-	}
-}
-
-&.text-overflow-ellipsis--30 {
-	max-width: 30rem;
-}
-
-&.text-overflow-ellipsis--40 {
-	max-width: 40rem;
-}
-
 dt.contact-card__data__title {
 	@include for-phone-only {
 		display: block !important;
