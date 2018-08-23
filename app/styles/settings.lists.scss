@@ -156,31 +156,6 @@ ol {
 	}
 }
 
-// ul,
-// ol {
-// 	&.article-list > li {
-// 		counter-increment: step-counter-besluit;
-// 		position: relative;
-// 		padding-left: 9rem;
-// 		margin-bottom: 1rem;
-
-// 		&:before {
-// 			content: counter(step-counter-besluit);
-// 			margin-right: 1rem;
-// 			position: absolute;
-// 			left: 5.5rem;
-// 			top: 0.1rem;
-// 		}
-
-// 		&:after {
-// 			content: "Artikel";
-// 			position: absolute;
-// 			left: 0;
-// 			top: 0.1rem;
-// 		}
-// 	}
-// }
-
 .search-box__results {
 	max-height: 40vh;
 	overflow: scroll;
@@ -242,16 +217,6 @@ ul.preview-list {
 	}
 }
 
-// ol.bullet-list--ordered {
-// 	list-style-type: lower-alpha;
-// 	margin: 0 0 1rem 2rem;
-// }
-
-// ol.bullet-list--ordered li {
-// 	list-style-type: decimal;
-// 	margin-bottom: 0.5em;
-// }
-
 /* Temporary list problem
  ========================================================================== */
 
@@ -267,8 +232,6 @@ ul.preview-list {
 	padding-top: 0;
 	}
 }
-
-
 
 /* Modal
  ========================================================================== */
@@ -295,46 +258,5 @@ ol {
 		margin-bottom: 0;
 		line-height: 1.2;
 		font-size: 1.4rem;
-	}
-}
-
-dl.aanwezigen-lijst {
-	margin-top: 2rem !important;
-
-	.properties__label {
-		width: 20%;
-		padding-bottom: 0;
-	}
-	.properties__data {
-		width: 80%;
-		padding-bottom: 0.1rem;
-		line-height: 2rem;
-	}
-
-	.dynamic-label__input {
-		padding-top: 0.5rem;
-	}
-
-	.icon-container {
-		.input-field {
-			padding-left: 3.5rem;
-			margin-bottom: 1rem;
-		}
-
-		.input-field__icon {
-			top: 0.55rem;
-			left: 1rem;
-		}
-	}
-}
-
-.grid dl.aanwezigen-lijst {
-	margin-top: 2rem !important;
-
-	.properties__label {
-		width: 100%;
-	}
-	.properties__data {
-		width: 100%;
 	}
 }
