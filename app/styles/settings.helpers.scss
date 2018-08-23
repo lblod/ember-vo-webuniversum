@@ -162,8 +162,6 @@ td {
 	display: inline-block;
 }
 
-
-
 th.u-hidden,
 td.u-hidden,
 .u-hidden {
@@ -244,44 +242,6 @@ td.u-hidden,
 	border-left: 1px solid $gray-light;
 }
 
-
-.u-border--lighter,
-.u-border--lighter--round {
-    border: 1px solid $blue-gray-lighter;
-}
-
-.u-border--lighter--none {
-	border: none !important;
-}
-
-.u-border--lighter--right {
-	border-right: 1px solid $blue-gray-lighter;
-}
-
-.u-border--lighter--left {
-	border-left: 1px solid $blue-gray-lighter;
-}
-
-.u-border--lighter--top {
-	border-top: 1px solid $blue-gray-lighter;
-}
-
-.u-border--lighter--bottom {
-	border-bottom: 1px solid $blue-gray-lighter;
-}
-
-.u-border--lighter--tb {
-	border-bottom: 1px solid $gray-light;
-	border-top: 1px solid $gray-light;
-}
-
-.u-border--lighter--rl {
-	border-right: 1px solid $gray-light;
-	border-left: 1px solid $gray-light;
-}
-
-
-
 .u-border--light,
 .u-border--light--round {
     border: 1px solid $blue-gray-light;
@@ -305,75 +265,6 @@ td.u-hidden,
 
 .u-border--light--bottom {
 	border-bottom: 1px solid $blue-gray-light;
-}
-
-
-.u-border--medium,
-.u-border--medium--round {
-    border: 2px solid $gray-light;
-}
-
-.u-border--medium {
-    border: 2px solid $gray-lighter;
-}
-
-.u-border--medium--right {
-    border-right: 2px solid $gray-lighter;
-}
-
-.u-border--medium--left {
-    border-left: 2px solid $gray-lighter;
-}
-
-.u-border--medium--top {
-    border-top: 2px solid $gray-lighter;
-}
-
-.u-border--medium--bottom {
-    border-bottom: 2px solid $gray-lighter;
-}
-
-.u-border--fat,
-.u-border--fat--round {
-    border: 3px solid $gray-light;
-}
-
-.u-border--fat {
-    border: 3px solid $gray-lighter;
-}
-
-.u-border--fat--right {
-    border-right: 3px solid $gray-lighter;
-}
-
-.u-border--fat--left {
-    border-left: 3px solid $gray-lighter;
-
-    &.u-border--yellow {
-    	border-left-color: $primary-yellow;
-    }
-
-    &.u-border--blue {
-    	border-left-color: $primary-blue;
-    }
-
-    &.u-border--black {
-    	border-left-color: $black;
-    }
-
-    &.u-border--gray-dark {
-    	border-left-color: $gray-dark;
-    }
-
-    &.u-border--gray {
-    	border-left-color: $gray;
-    }
-}
-
-// TODO: put in styleguide
-
-.u-border--fat--top {
-    border-top: 3px solid $gray-lighter;
 }
 
 .u-border--fat--bottom {
@@ -753,7 +644,6 @@ td.u-hidden,
 	padding-right: 4rem !important;
 	padding-left: 4rem !important;
 }
-
 
 /* top and bottom */
 
