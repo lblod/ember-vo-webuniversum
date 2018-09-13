@@ -45,3 +45,10 @@
 		color: darken($primary-yellow, 12%);
 	}
 }
+
+// /* Z-index switch trigger
+//  ========================================================================== */
+
+.checkbox--switch+.checkbox--switch__label:after {
+	z-index: 1;
+}
