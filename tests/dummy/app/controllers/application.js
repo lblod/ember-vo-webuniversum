@@ -14,8 +14,11 @@ export default Controller.extend({
     website: "http://vlaanderen.be"
   },
   actions: {
-    dummyClick() {
-      window.alert('Click');
+    dummyClick(value) {
+      if (value)
+        window.alert('Click ' + value );
+      else
+        window.alert('Click ');
     },
     showDialog() {
       this.set('showModal', true);

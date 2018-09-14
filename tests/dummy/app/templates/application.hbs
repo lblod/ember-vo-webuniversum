@@ -169,6 +169,19 @@
 
     <section class="region">
       <div class="layout layout--wide">
+        <h2 class="h2">Radio button</h2>
+        {{wu-radio-button label="radio value 1" value="radio value 1" onChange=(action 'dummyClick')}}
+        {{wu-radio-button label="radio value 2" value="radio value 2" onChange=(action 'dummyClick')}}
+
+          <h4 class="h4">Radio button block</h4>
+          {{wu-radio-button isBlock=true label="radio value 1" value="radio value 1" onChange=(action 'dummyClick')}}
+          {{wu-radio-button isBlock=true label="radio value 2" value="radio value 2" onChange=(action 'dummyClick')}}
+
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="layout layout--wide">
         <h2 class="h2">Switch</h2>
         {{wu-switch checked=isCheckedSwitch label="My switch" disabled=true}}
       </div>
@@ -344,13 +357,6 @@
             {{/c.content}}
           {{/contact-card}}
         </div>
-      </div>
-    </section>
-
-    <section class="region">
-      <div class="layout layout--wide">
-        <h2 class="h2">Header widget</h2>
-        {{wu-widget src="//widgets.vlaanderen.be/widget/live/536f9f3a7a7d4842aecd269a28a636d1"}}
       </div>
     </section>
 

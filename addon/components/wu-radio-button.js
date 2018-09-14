@@ -21,9 +21,9 @@ export default Component.extend({
   onChange: null,
 
   actions: {
-    changeValue(event) {
+    changeValue() {
       if (this.onChange)
-        this.onChange(event.target.value);
+        this.onChange(this.value);
     }
   }
 });
