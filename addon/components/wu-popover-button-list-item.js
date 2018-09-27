@@ -11,7 +11,9 @@ export default Component.extend({
     assert('{{wu-popover-button-list-item}} requires an `onClick` action or null for no action.', this.get('onClick') !== undefined);
   },
   click() {
-    this.sendAction('onClick'); // eslint-disable-line ember/closure-actions
-    this.get('close')();
+    if (this.onClick)
+      this.onClick();
+    if (this.close)
+      this.close();
   }
 });

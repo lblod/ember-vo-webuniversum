@@ -20,7 +20,8 @@ export default Component.extend({
     assert('{{wu-modal-buttons-button}} requires an `onClick` action or null for no action.', this.get('onClick') !== undefined);
   },
   click() {
-    this.sendAction('onClick'); // eslint-disable-line ember/closure-actions
+    if (this.onClick)
+      this.onClick();
   }
 
 });

@@ -22,6 +22,7 @@ export default Component.extend({
   size: 'normal', // one of 'normal', 'medium', 'large'
   onClick: null,
   click() {
-    this.sendAction('onClick'); // eslint-disable-line ember/closure-actions
+    if (this.onClick)
+      this.onClick();
   }
 });
