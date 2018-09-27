@@ -27,7 +27,7 @@
     "ember-cli-babel": "^6.16.0",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-moment-shim": "~3.7.1",
-    "ember-click-outside": "^0.1.12",
+    "ember-click-outside": "^1.0.0",
     "ember-wormhole": "^0.5.4"
   },
   "devDependencies": {
