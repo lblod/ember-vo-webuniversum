@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: '@lblod/ember-vo-webuniversum',
+  name: require('./package').name,
   included: function included(app) {
     this._super.included.apply(this, app);
     app.import('vendor/lblod/main.css');
@@ -18,8 +18,7 @@ module.exports = {
       return `
         <link href="//dij151upo6vad.cloudfront.net/${version}/css/vlaanderen-ui.css" rel="stylesheet" type="text/css" />
         <link href="//dij151upo6vad.cloudfront.net/${version}/css/vlaanderen-ui-corporate.css" rel="stylesheet" type="text/css" />
-        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-`;
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />`;
     } else if (type === 'body'){
       return `<script src="//dij151upo6vad.cloudfront.net/${version}/js/vlaanderen-ui.js" type="text/javascript"></script>\n` +
         '<div id="ember-vo-webuniversum-wormhole"></div>';
