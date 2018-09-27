@@ -12,7 +12,7 @@ module('Integration | Component | contact-card-content-email', function(hooks) {
 
     await render(hbs`{{contact-card-content-email}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | contact-card-content-email', function(hooks) {
       {{/contact-card-content-email}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });
