@@ -41,22 +41,6 @@ ol {
 	}
 }
 
-
-.editor__paper ul.article-list ul,
-.editor__paper ul.bullet-list ul {
-	margin-top: 0.5rem;
-}
-
-.editor__paper ul.bullet-list ul > li {
-	margin-left: 2rem;
-	list-style-type: circle;
-}
-
-.editor__paper ul.article-list ul > li {
-	margin-left: 12rem;
-	list-style-type: circle;
-}
-
 ul,
 ol {
 	&.numbered-list {
@@ -67,6 +51,11 @@ ol {
 	&.numbered-list li {
 		list-style-type: decimal;
 		margin-bottom: 0.5em;
+		list-style-position: inside;
+
+		li {
+			list-style-position: inside;
+		}
 	}
 }
 
@@ -136,23 +125,6 @@ ol {
 
 	&.icon-list li .annotation--agendapunt--besloten__icon {
 		color: darken($primary-yellow, 15%);
-	}
-}
-
-ul,
-ol {
-	&.article-list > li {
-		margin-bottom: 0.6rem;
-
-		span.article-number {
-			position: absolute;
-			left: 0;
-		}
-
-		span.article-content {
-			margin-left: 10rem;
-			display: block;
-		}
 	}
 }
 
