@@ -26,13 +26,17 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 1000;
+	z-index: 1010;
 	background-color: rgba($white, 0.8);
 }
 
 .modal-dialog.modal-dialog--wide {
-	width: 80vw;
+	width: 90vw;
 	max-width: none;
+
+	&.modal-dialog--sectioned .modal-dialog__content > *{
+		max-height: 60vh;
+	}
 }
 
 .modal-overlay-hidden {
