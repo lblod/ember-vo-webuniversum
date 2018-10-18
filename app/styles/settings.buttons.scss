@@ -397,7 +397,7 @@ button.button.button--alt.button--alt--fancy {
 
 a.button.button--link,
 button.button.button--link {
-	background-color: $white;
+	background-color: transparent;
 	color: $primary-blue;
 	border: none;
 	text-decoration: underline;
@@ -528,6 +528,10 @@ a.link--dark--light i.vi {
 
 .button.button--tiny {
 
+	i {
+		padding-right: 0.2rem;
+	}
+
 	.button__info--below {
 		bottom: -17px;
 		font-size: 1rem;
@@ -535,6 +539,10 @@ a.link--dark--light i.vi {
 }
 
 .button.button--small {
+
+	i {
+		padding-right: 0.5rem;
+	}
 
 	.button__info--below {
 		bottom: -20px;
