@@ -54,3 +54,31 @@ table.data-table.data-table--nowrap th {
 .data-table__actions--bottom {
 	border-top: 1px solid $blue-gray-light;
 }
+
+// /* nested
+//  ========================================================================== */
+
+.data-table.data-table--zebra td.data-table--nested,
+.data-table.data-table--lined th.data-table--nested {
+  padding: 0 !important;
+
+  > table tr {
+    background-color: transparent;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  > table thead {
+  	border: none;
+  }
+
+  > table thead tr {
+
+  	&:first-child {
+  		border-top: none;
+  	}
+  	border-bottom-width: 1px;
+  }
+}
