@@ -8,29 +8,6 @@ table.data-table.data-table--nowrap th {
 	white-space: nowrap;
 }
 
-// /* Tighter tables
-//  ========================================================================== */
-
-.data-table--tight {
-	th,
-	td {
-		font-size: 1.5rem;
-		padding: 1rem 0.8rem;
-	}
-}
-
-/* Table in editor
- ========================================================================== */
-
-.editor__paper table th {
-  white-space: initial;
-}
-
-.editor__paper .data-table th,
-.editor__paper .data-table td {
-  font-size: 1.4rem;
-}
-
 // /* Actions
 //  ========================================================================== */
 
@@ -81,4 +58,16 @@ table.data-table.data-table--nowrap th {
   	}
   	border-bottom-width: 1px;
   }
+}
+
+
+// /* Tighter tables
+//  ========================================================================== */
+
+.data-table.data-table--tight {
+	th,
+	td {
+		font-size: 1.5rem;
+		padding: 1rem 0.8rem;
+	}
 }
