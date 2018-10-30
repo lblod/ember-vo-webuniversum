@@ -105,29 +105,6 @@ ol {
 	}
 }
 
-ul,
-ol {
-	&.icon-list li {
-		padding-left: 4rem;
-		margin-bottom: 0.6rem;
-	}
-
-	&.icon-list li .annotation--agendapunt--open__icon,
-	&.icon-list li .annotation--agendapunt--besloten__icon {
-		position: absolute;
-		left: 0;
-		padding: 0 1px;
-	}
-
-	&.icon-list li .annotation--agendapunt--open__icon {
-		color: $gray-light;
-	}
-
-	&.icon-list li .annotation--agendapunt--besloten__icon {
-		color: darken($primary-yellow, 15%);
-	}
-}
-
 .search-box__results {
 	max-height: 40vh;
 	overflow: scroll;
