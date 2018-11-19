@@ -335,7 +335,25 @@
 
       </div>
     </section>
-
+    <section class="region">
+      <div class="layout layout--wide">
+        <h2 class="h2">Wizard</h2>
+        {{#wu-wizard finish=(action 'dummyClick') as |wizard|}}
+          {{#wizard.step as |step|}}
+            {{step.header title='step 1'}}
+            {{#step.pane}}
+              Some content here
+            {{/step.pane}}
+          {{/wizard.step}}
+          {{#wizard.step as |step|}}
+            {{step.header title='step 2'}}
+            {{#step.pane}}
+              Some extra content here
+            {{/step.pane}}
+          {{/wizard.step}}
+        {{/wu-wizard}}
+      </div>
+    </section>
     <section class="region">
       <div class="layout layout--wide">
         <h2 class="h2">Contact Card</h2>

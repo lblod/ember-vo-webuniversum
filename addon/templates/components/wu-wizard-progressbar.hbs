@@ -1,0 +1,7 @@
+<div class="progress-bar" role="progressbar">
+  {{#each steps as |step|}}
+    <div class="progress-bar__step">
+      <a href="" class="progress-bar__bullet" data-toggle="popover" aria-label={{step}} data-content={{step}} data-placement="top" data-wizard-step {{action 'setStep' step}}></a>
+    </div>
+  {{/each}}
+</div>
