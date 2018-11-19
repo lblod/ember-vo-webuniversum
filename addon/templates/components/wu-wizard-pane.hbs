@@ -1,14 +1,3 @@
 <div class="wizard__pane">
   {{yield}}
-  <div class="wizard__cta-wrapper">
-    {{#if hasNextStep}}
-      {{#wu-button onClick=nextStep}}Volgende{{/wu-button}}
-    {{else}}
-      {{#wu-button onClick=finish}}Voltooien{{/wu-button}}
-    {{/if}}
-    {{#if hasPreviousStep}}
-      <br> <br>
-      <a href="" class="link link--icon link--icon--caret link--icon--caret--back wizard__cta" {{action 'previousStep'}}>vorige</a>
-    {{/if}}
-  </div>
 </div>

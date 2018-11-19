@@ -338,20 +338,66 @@
     <section class="region">
       <div class="layout layout--wide">
         <h2 class="h2">Wizard</h2>
-        {{#wu-wizard finish=(action 'dummyClick') as |wizard|}}
+        {{#wu-wizard as |wizard|}}
           {{#wizard.step as |step|}}
             {{step.header title='step 1'}}
-            {{#step.pane}}
+            {{#step.pane as |pane|}}
               Some content here
+              {{#wu-button-group}}
+                {{wizard.next}}
+              {{/wu-button-group}}
             {{/step.pane}}
           {{/wizard.step}}
           {{#wizard.step as |step|}}
             {{step.header title='step 2'}}
-            {{#step.pane}}
+            {{#step.pane as |pane|}}
               Some extra content here
+              {{#wu-button-group}}
+                {{#wu-button-group isInline=true}}
+                  {{wizard.previous}}
+                  {{#wu-button onClick=(action 'dummyClick')}}finish{{/wu-button}}
+                {{/wu-button-group}}
+              {{/wu-button-group}}
             {{/step.pane}}
           {{/wizard.step}}
         {{/wu-wizard}}
+        <h2 class="h2">Numeric Wizard</h2>
+        {{#wu-wizard isNumeric=true as |wizard|}}
+          {{#wizard.step as |step|}}
+            {{step.header title='step 1'}}
+            {{#step.pane as |pane|}}
+              Some content here
+              {{#wu-button-group}}
+                {{wizard.next}}
+              {{/wu-button-group}}
+            {{/step.pane}}
+          {{/wizard.step}}
+          {{#wizard.step as |step|}}
+            {{step.header title='step 2'}}
+            {{#step.pane as |pane|}}
+              Some extra content here
+              {{#wu-button-group}}
+                {{#wu-button-group isInline=true}}
+                  {{wizard.previous}}
+                  {{wizard.next}}
+                {{/wu-button-group}}
+              {{/wu-button-group}}
+            {{/step.pane}}
+          {{/wizard.step}}
+          {{#wizard.step as |step|}}
+            {{step.header title='step 3'}}
+            {{#step.pane as |pane|}}
+              even more content here
+              {{#wu-button-group}}
+                {{#wu-button-group isInline=true}}
+                  {{wizard.previous}}
+                  {{#wu-button onClick=(action 'dummyClick')}}finish{{/wu-button}}
+                {{/wu-button-group}}
+              {{/wu-button-group}}
+            {{/step.pane}}
+          {{/wizard.step}}
+
+      {{/wu-wizard}}
       </div>
     </section>
     <section class="region">

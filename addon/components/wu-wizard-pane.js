@@ -7,9 +7,6 @@ export default Component.extend({
   actions: {
     nextStep() {
       this.nextStep();
-    },
-    finish() {
-      this.finish();
     }
   }
 });

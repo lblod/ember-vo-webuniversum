@@ -14,7 +14,7 @@ export default Component.extend({
   },
   previousStep: computed('currentStep', 'steps', function() {
     const index = this.steps.indexOf(this.currentStep);
-    if (index > 1 )
+    if (index > 0 )
       return this.steps[index-1];
     else
       return null;
@@ -26,10 +26,20 @@ export default Component.extend({
     else
       return null;
   }),
+  parsedSteps: computed('steps', 'currentStep', function() {
+    return this.steps.map( (id) => {
+      return {id, active: (id === this.currentStep) };
+    });
+  }),
   actions: {
     nextStep() {
       if (this.nextStep) {
         this.set('currentStep', this.nextStep);
+      }
+    },
+    previousStep() {
+      if (this.previousStep) {
+        this.set('currentStep', this.previousStep);
       }
     },
     setStep(step) {

@@ -1,10 +1,10 @@
 {{#if isActive}}
-{{yield
-  (hash
-  header=(component "wu-wizard-header")
-  pane=(component "wu-wizard-pane" nextStep=nextStep finish=finish hasNextStep=hasNextStep)
-  )
-}}
+  {{yield
+    (hash
+    header=(component "wu-wizard-header")
+    pane=(component "wu-wizard-pane")
+    )
+  }}
 {{else}}
   {{yield to="inverse"}}
 {{/if}}

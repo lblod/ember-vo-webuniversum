@@ -1,16 +1,17 @@
 <section class="wizard">
-  {{wu-wizard-progressbar currentStep=step steps=steps setStep=(action 'setStep')}}
+  {{wu-wizard-progressbar isNumeric=isNumeric steps=parsedSteps setStep=(action 'setStep')}}
   <div class="wizard__panes u-spacer">
-  {{yield (hash
-    step=(component "wu-wizard-step"
+    {{yield (hash
+      step=(component "wu-wizard-step"
       currentStep=(readonly currentStep)
-      hasNextStep=(readonly nextStep)
       registerStep=(action 'registerStep')
       unregisterStep=(action 'unregisterStep')
-      nextStep=(action 'nextStep')
-      finish=finish
-    )
-    )
-  }}
+      )
+      next=(component "wu-wizard-next" nextStep=(action 'nextStep'))
+      previous=(component "wu-wizard-previous" previousStep=(action 'previousStep'))
+      hasNextStep=(readonly hasNextStep)
+      hasPreviousStep=(readonly hasPreviousStep)
+      )
+    }}
   </div>
 </section>
