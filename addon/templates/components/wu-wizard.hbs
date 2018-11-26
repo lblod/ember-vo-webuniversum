@@ -1,6 +1,6 @@
 <section class="wizard">
   {{wu-wizard-progressbar isNumeric=isNumeric steps=parsedSteps setStep=(action 'setStep')}}
-  <div class="wizard__panes u-spacer">
+  <div class="wizard__panes">
     {{yield (hash
       step=(component "wu-wizard-step"
       currentStep=(readonly currentStep)
