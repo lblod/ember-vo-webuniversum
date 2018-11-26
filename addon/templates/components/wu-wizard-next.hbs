@@ -1,7 +1,8 @@
-{{#wu-button onClick=(action 'actionable')}}
+{{#wu-button isNarrow=true onClick=(action 'actionable')}}
   {{#if hasBlock}}
     {{yield}}
   {{else}}
-    volgende
+    Volgende stap
+    <i class="vi vi-arrow vi-u-s"></i>
   {{/if}}
 {{/wu-button}}
