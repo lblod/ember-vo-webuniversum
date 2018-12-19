@@ -14,3 +14,16 @@
 .js-accordion--open .accordion__content {
 	display: block;
 }
+
+.js-accordion--open tr.accordion__content {
+	display: table-row;
+}
+
+.js-accordion--open tr.accordion__content,
+.js-accordion--open td.accordion__content {
+	display: table-cell;
+}
+
+.js-accordion--open table.accordion__content {
+	display: table;
+}
