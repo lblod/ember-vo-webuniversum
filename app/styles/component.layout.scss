@@ -17,10 +17,6 @@ body {
   flex-direction: column;
 }
 
-
-/* General
- ========================================================================== */
-
 .data-table__scroll {
   display: flex;
   flex: 1;
@@ -72,6 +68,14 @@ body {
   &.tab__pane[data-show=true] {
     display: flex;
   }
+}
+
+
+/* Header
+ ========================================================================== */
+
+.vo-header-widget {
+  min-height: 45px;
 }
 
 
