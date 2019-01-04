@@ -108,6 +108,10 @@ a[class^="link--icon--"]:before {
 	padding-left: 0.15rem;
 }
 
+.link-group.link-group--tiny .link--icon.link--disabled i {
+	color: $gray-dark;
+}
+
 .link--disabled {
 	opacity: 0.8;
 }
