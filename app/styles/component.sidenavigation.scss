@@ -104,11 +104,11 @@
 }
 
 .side-navigation--blocks li.active {
-	box-shadow: inset 0.5rem 0 0 $primary-blue;
+	box-shadow: inset 0.3rem 0 0 $primary-blue;
 }
 
 .side-navigation--blocks li:hover {
-	box-shadow: inset 0.5rem 0 0 $primary-blue;
+	box-shadow: inset 0.3rem 0 0 $primary-blue;
 	background: $blue-gray-lightest;
 	cursor: pointer;
 }
