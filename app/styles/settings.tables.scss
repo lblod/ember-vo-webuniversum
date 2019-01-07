@@ -71,3 +71,11 @@ table.data-table.data-table--nowrap th {
 		padding: 1rem 0.8rem;
 	}
 }
+
+// /* Links in tables
+//  ========================================================================== */
+
+.data-table tbody a {
+  color: $primary-blue;
+  text-decoration: underline;
+}
