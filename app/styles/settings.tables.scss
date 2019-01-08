@@ -78,4 +78,9 @@ table.data-table.data-table--nowrap th {
 .data-table tbody a {
   color: $primary-blue;
   text-decoration: underline;
+
+  &:focus,
+  &:hover {
+  	color: lighten($primary-blue, 5%);
+  }
 }
