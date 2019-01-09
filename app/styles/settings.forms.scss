@@ -8,6 +8,10 @@
 
 .input-field--block .datepicker {
 	width: 100%;
+
+	.input-field {
+		width: 100%;
+	}
 }
 
 /* Alternative sizes
@@ -686,9 +690,9 @@ form.input-field--disabled {
 	  position: absolute;
 	  width: 2rem;
 	  height: 2rem;
-	  line-height: 1.2;
+	  line-height: 1.1;
 	  text-align: center;
-	  top: 0.7rem;
+	  top: 0.5rem;
 	}
 
 /* Smaller size
