@@ -75,7 +75,7 @@ table.data-table.data-table--nowrap th {
 // /* Links in tables
 //  ========================================================================== */
 
-.data-table tbody a {
+.data-table tbody a:not(.button) {
   color: $primary-blue;
   text-decoration: underline;
 
