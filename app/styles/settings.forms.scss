@@ -648,12 +648,17 @@ form.input-field--disabled {
 
 
 .step .ember-power-select-trigger {
-  padding-right: 4.5rem;
+  padding-right: 6rem;
   height: 4.5rem;
   font-size: 1.6rem;
-  max-width: 250px;
   width: 100%;
   display: block;
+
+  .ember-power-select-clear-btn {
+  	top: 1.2rem;
+  	line-height: 0.9;
+  	right: 35px;
+  }
 }
 
 	.ember-power-select-trigger .ember-power-select-status-icon:after {
