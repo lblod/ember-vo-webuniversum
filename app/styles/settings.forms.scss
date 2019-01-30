@@ -643,6 +643,11 @@ form.input-field--disabled {
 	  text-overflow: ellipsis;
 	}
 
+	.ember-power-select-placeholder,
+	.ember-power-select-selected-item {
+		display: inline;
+	}
+
 /* Restyle for steps with power select
  ========================================================================== */
 
@@ -653,6 +658,7 @@ form.input-field--disabled {
   font-size: 1.8rem;
   width: 100%;
   display: block;
+  line-height: 2.5;
 
   .ember-power-select-clear-btn {
   	top: 1.2rem;
