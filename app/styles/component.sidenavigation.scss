@@ -101,16 +101,19 @@
 .side-navigation--blocks li {
 	border-bottom: 1px solid $gray-lighter;
 	padding: 1rem 0 1.5rem;
+	transition: all 400ms;
+	box-shadow: inset 0 0 0 $primary-blue;
+}
+
+.side-navigation--blocks li:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .side-navigation--blocks li.active {
 	box-shadow: inset 0.3rem 0 0 $primary-blue;
-}
-
-.side-navigation--blocks li:hover {
-	box-shadow: inset 0.3rem 0 0 $primary-blue;
 	background: $blue-gray-lightest;
-	cursor: pointer;
+	font-weight: 500;
 }
 
 .side-navigation--blocks a {
