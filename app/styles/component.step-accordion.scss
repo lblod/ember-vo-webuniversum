@@ -1,0 +1,37 @@
+/* ==========================================================================
+  Step-accordion
+  Style the Step-accordion here.
+ ========================================================================== */
+
+.step__header {
+	cursor: pointer;
+
+	&:hover {
+		.step__accordion-toggle:before {
+	    -webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	    transform: rotate(-90deg);
+	    color: $primary-blue;
+		}
+	}
+}
+
+.js-accordion--open .step__header:hover  .step__accordion-toggle:before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.step--accordion.js-accordion--open .step__content-wrapper {
+	max-height: none;
+}
+
+.step--accordion .step__content-wrapper .step__content {
+	opacity: 0;
+	transition: opacity 800ms;
+}
+
+.step--accordion.js-accordion--open .step__content-wrapper .step__content {
+	opacity: 1;
+	transition: opacity 800ms;
+}
