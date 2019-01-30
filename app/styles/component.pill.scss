@@ -6,6 +6,14 @@
 /* pill with color and label
  ========================================================================== */
 
+.pill {
+	i.vi {
+		display: inline;
+		font-size: 80%;
+		line-height: 1;
+	}
+}
+
 .pill--white {
 	background-color: white;
 
