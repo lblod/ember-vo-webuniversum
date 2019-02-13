@@ -3,6 +3,10 @@
   Style the Step-accordion here.
  ========================================================================== */
 
+.step__title:first-letter {
+	text-transform: uppercase;
+}
+
 .step__header {
 	cursor: pointer;
 
@@ -16,7 +20,7 @@
 	}
 }
 
-.js-accordion--open .step__header:hover  .step__accordion-toggle:before {
+.js-accordion--open .step__header:hover .step__accordion-toggle:before {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
