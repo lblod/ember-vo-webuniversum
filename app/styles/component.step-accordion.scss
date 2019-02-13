@@ -36,6 +36,11 @@
 	transition: opacity 800ms;
 }
 
+/* step styling override */
+
+.step__content p + p {
+	margin-top: 0;
+}
 
 /* step info */
 
