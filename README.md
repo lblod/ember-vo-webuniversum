@@ -2,7 +2,16 @@
 
 Ember addon wrapping [the webuniversum components of Vlaanderen](https://overheid.vlaanderen.be/webuniversum/alle-front-end-componenten).
 
+
+## Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
+
 ## Installation
+------------------------------------------------------------------------------
 
 ```bash
 ember install @lblod/ember-vo-webuniversum
