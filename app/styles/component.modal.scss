@@ -57,14 +57,11 @@
 
 .modal-dialog.modal-dialog--sectioned {
 	padding: 0;
-}
-
-.modal-dialog.modal-dialog--sectioned {
 	overflow: hidden;
 	max-height: none;
 
 	.modal-dialog__header {
-		padding: 1.5rem 1.5rem 1rem;
+		padding: 1.5rem 1.5rem 1rem 2rem;
 
 		.h1,
 		.h2,
