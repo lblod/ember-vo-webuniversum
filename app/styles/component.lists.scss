@@ -1,12 +1,14 @@
 /* ==========================================================================
-  lists
-  Style the lists here.
+  Lists
+  Define alternative lists here.
+ ========================================================================== */
+
+/* Inline list
  ========================================================================== */
 
 .inline-list li {
 	display: inline-block;
-	padding-right: 1.5rem;
-	margin-right: 0.8rem;
+	margin-right: 1rem;
 	vertical-align: top;
 }
 
@@ -18,16 +20,50 @@
 	}
 }
 
-ul.bullet-list {
-	padding-left: 2rem;
+/* Bullet list
+ ========================================================================== */
+
+ul,
+ol {
+	&.bullet-list {
+		list-style-type: disc;
+		list-style: disc;
+		margin-left: 2rem;
+		padding-left: 2rem;
+	}
+
+	&.bullet-list--spaced > li {
+		margin-bottom: 1rem;
+	}
+
+	&.bullet-list--spaced--small > li {
+		margin-bottom: 0.5rem;
+	}
 }
 
-ul.bullet-list li {
-	list-style-type: disc;
-	list-style: disc;
+/* Numbered list
+ ========================================================================== */
+
+ul,
+ol {
+	&.numbered-list {
+		list-style-type: lower-alpha;
+		margin: 0 0 1rem 2rem;
+	}
+
+	&.numbered-list li {
+		list-style-type: decimal;
+		margin-bottom: 0.5em;
+		list-style-position: inside;
+
+		li {
+			list-style-position: inside;
+		}
+	}
 }
 
-/* ------ FOR EDITOR ----- */
+/* Dashed list
+ ========================================================================== */
 
 ul,
 ol {
@@ -50,50 +86,46 @@ ol {
 	}
 }
 
-ul,
-ol {
-	&.numbered-list {
-		list-style-type: lower-alpha;
-		margin: 0 0 1rem 2rem;
-	}
 
-	&.numbered-list li {
-		list-style-type: decimal;
-		margin-bottom: 0.5em;
+/* Searchbox results
+ ========================================================================== */
+
+.search-box__results {
+	max-height: 40vh;
+	overflow: scroll;
+
+	li {
+		padding: 0.5rem 1.5rem;
+		font-size: 1.6rem;
+
+		&:hover {
+			background-color: $blue-gray-lightest;
+			cursor: pointer;
+			color: $primary-blue;
+		}
+
+		&:first-child {
+			padding-top: 0.7rem;
+		}
+
+		&:last-child {
+			padding-bottom: 0.7rem;
+		}
 	}
 }
 
-/* preview list */
+/* Temporary list problem
+ ========================================================================== */
 
-ul.preview-list {
+.side-navigation {
+	font-size: 1.6rem;
+}
 
-	li {
-		display: inline-block;
-		cursor: pointer;
+.side-navigation__item > ul {
+	display: block !important;
+	font-size: 95%;
 
-		&:hover {
-			.preview-list__image {
-				box-shadow: 0 0 6px 0 $primary-blue;
-			}
-
-			.preview-list__name {
-				color: $primary-blue;
-			}
-		}
-	}
-
-	.preview-list__image {
-		width: 16rem;
-		height: 20rem;
-		display: block;
-		box-shadow: 0 0 6px 0 $blue-gray-light;
-		overflow: hidden;
-	}
-
-	.preview-list__name {
-		display: block;
-		padding: 1rem 0;
-		line-height: 1.2;
-		margin-bottom: 1rem;
+	&.side-navigation__group {
+	padding-top: 0;
 	}
 }
