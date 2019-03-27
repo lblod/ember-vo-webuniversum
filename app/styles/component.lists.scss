@@ -14,6 +14,8 @@
 
 .inline-list.inline-list--bordered li {
 	border-right: 1px solid $blue-gray-light;
+	padding-right: 1.5rem;
+	margin-right: 0.8rem;
 
 	&:last-child {
 		border-right: none;
