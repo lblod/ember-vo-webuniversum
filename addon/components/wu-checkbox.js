@@ -17,5 +17,6 @@ export default Component.extend({
   disabled: false,
   isBlock: false,
   error: null,
-  label: null
+  label: null,
+  onClick() {}
 });

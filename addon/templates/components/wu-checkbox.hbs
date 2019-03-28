@@ -1,4 +1,11 @@
-{{input type="checkbox" class="checkbox__toggle" name="checkbox" checked=checked disabled=disabled}}
+{{input
+    type="checkbox"
+    class="checkbox__toggle"
+    name="checkbox"
+    checked=checked
+    disabled=disabled
+    click=(action onClick)
+}}
 <span></span>
 {{#if hasBlock}}
   {{yield}}
