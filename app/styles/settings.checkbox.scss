@@ -10,10 +10,12 @@
 	display: inline-block;
 }
 
-.checkbox--switch__wrapper.checkbox--switch--small {
-	font-size: 0.8em;
+.checkbox--switch--small.checkbox-switch__wrapper {
+	span {
+		font-size: 0.8em;
+	}
 
-	.checkbox--switch+.checkbox--switch__label {
+	.checkbox--switch + label.checkbox--switch__label {
 		height: 1.1rem;
 		width: 2.5rem;
 
