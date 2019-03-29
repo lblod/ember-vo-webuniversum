@@ -83,40 +83,7 @@
 	}
 }
 
-
-
-
-/* Side navigation block layout
- ========================================================================== */
-
-
-.side-navigation--blocks .side-navigation__group {
-	padding: 0;
-}
-
-.side-navigation--blocks .link-group {
-	margin-left: 1.5rem;
-}
-
-.side-navigation--blocks li {
-	border-bottom: 1px solid $gray-lighter;
-	padding: 1rem 0 1.5rem;
-	transition: all 400ms;
-	box-shadow: inset 0 0 0 $primary-blue;
-}
-
-.side-navigation--blocks li:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-.side-navigation--blocks li.active {
-	box-shadow: inset 0.3rem 0 0 $primary-blue;
-	background: $blue-gray-lightest;
-	font-weight: 500;
-}
-
-.side-navigation--blocks a {
-	text-decoration: none !important;
-	color: $gray-dark;
+.side-navigation__item > a i {
+	margin-right: 0.5rem;
+	font-size: 0.7em;
 }
