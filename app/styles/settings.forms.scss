@@ -590,6 +590,10 @@ form.input-field--disabled {
   color: $gray-dark;
 }
 
+.ember-power-select-dropdown.ember-basic-dropdown-content--above {
+	border-top: 1px solid $blue-gray-light;
+}
+
 .ember-basic-dropdown-content.ember-power-select-dropdown.ember-basic-dropdown-content--below {
   box-shadow: 0 2px 2px rgba($blue-gray, 1);
 }
