@@ -722,6 +722,11 @@ form.input-field--disabled {
   padding-right: 3rem;
 }
 
+.ember-power-select--small .ember-power-select-trigger.ember-power-select-multiple-trigger {
+	height: auto;
+	min-height: 3rem;
+}
+
 .power-select.power-select--inline .ember-power-select-trigger,
 .ember-power-select.ember-power-select--inline .ember-power-select-trigger { // remove second selector when all apps are updated
 	display: inline-block;
