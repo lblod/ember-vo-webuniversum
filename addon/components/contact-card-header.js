@@ -3,6 +3,5 @@ import layout from '../templates/components/contact-card-header';
 
 export default Component.extend({
   layout,
-  tagName: 'header',
-  classNames: ['u-padding--trl--small']
+  tagName: 'header'
 });
