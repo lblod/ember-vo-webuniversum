@@ -6,15 +6,25 @@
 /* Burgers
  ========================================================================== */
 
-.info-tile--capped .info-tile__header__wrapper {
-	height: 19rem;
-	margin-bottom: 3rem;
-	overflow: hidden;
-	position: relative;
-	padding-bottom: 7.5rem;
+/* cards that are capped in height and width */
+
+.info-tile--capped {
+	.info-tile__header__title,
+	.info-tile__header__subtitle {
+		padding-right: 6rem;
+	}
 }
 
-.info-tile--capped .info-tile__header__wrapper:after {
+.info-tile--capped .info-tile__content {
+	height: 10rem;
+	overflow: hidden;
+	position: relative;
+	padding: 2rem 0 7.5rem 0;
+	margin-top: 2.5rem;
+	border-top: 1px solid $blue-gray-lighter;
+}
+
+.info-tile--capped .info-tile__content:after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -25,7 +35,19 @@
 	background: linear-gradient(to bottom, rgba($white, 0) 0%, $white 100%);
 }
 
-.info-tile--capped.info-tile--capped--animation .info-tile__header__wrapper {
+.info-tile--capped.info-tile--capped--expand .info-tile__content {
+	height: auto;
+	max-height: none;
+	border-bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+
+	&:after {
+		content: normal;
+	}
+}
+
+.info-tile--capped.info-tile--capped--expand .info-tile__content {
 	height: auto;
 	overflow: visible;
 	padding-bottom: 0;
@@ -35,19 +57,26 @@
 	}
 }
 
-.info-tile--expandable:hover {
-	box-shadow: inset 3px $primary-blue;
-}
-
+/* cards that can expand */
 
 .info-tile--expandable {
   transition: all 200ms;
   cursor: pointer;
 }
 
+.info-tile--expandable:hover {
+	box-shadow: inset 3px $primary-blue;
+  border-left-color: $primary-blue;
+
+  &:after {
+    color: $primary-blue;
+  }
+}
+
 .info-tile--expandable:after {
-  content:"\E015";
-  font-family: vlaanderen_iconfont!important;
+  content:"Klap uit \000A0 \000A0 \E015";
+  font-family: "vlaanderen_iconfont", flanders-sans, sans-serif;
+  font-weight: 500;
   color: $gray-light;
   position: absolute;
   right: 0.8rem;
@@ -56,20 +85,14 @@
   display: block;
   overflow: visible;
   -webkit-font-smoothing: antialiased;
+  transition: all 200ms;
 }
 
-.info-tile--expandable:hover {
-  box-shadow: inset 3px 0 0 $primary-blue;
-  border-left-color: $primary-blue;
-
-  &:after {
-    color: $primary-blue;
-  }
+.info-tile--capped.info-tile--expandable.info-tile--capped--expand:after {
+  content:"Klap in \000A0 \000A0 \E015";
 }
 
-
-
-/* layout of besluiten databank besluitenlijst */
+/* layout of besluiten databank besluitenlijst ! refactor */
 
 .annotations-wrapper--remove.annotation,
 .annotations-wrapper--remove .annotation {

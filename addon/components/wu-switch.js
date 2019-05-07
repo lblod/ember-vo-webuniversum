@@ -8,5 +8,6 @@ export default Component.extend({
   label: null,
   inputElementId: computed('elementId', function() {
     return `${this.get("elementId")}-input`;
-  })
+  }),
+  onClick() {}
 });

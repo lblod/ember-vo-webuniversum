@@ -52,19 +52,36 @@
 	z-index: 1000;
 }
 
+
+	/* full-width-modal remove once webuniversum updated*/
+
+	.modal-dialog.modal-dialog--full {
+		max-width: 100vw;
+		width: 100vw;
+		max-height: 100vh;
+		height: 100vh;
+
+		.modal-dialog__header {
+			height: 10vh;
+			max-height: none;
+			min-height: 6rem;
+		}
+
+		&.modal-dialog--sectioned .modal-dialog__content--sectioned > * {
+			max-height: 75vh;
+		}
+	}
+
 /* Sectioned modal
  ========================================================================== */
 
 .modal-dialog.modal-dialog--sectioned {
 	padding: 0;
-}
-
-.modal-dialog.modal-dialog--sectioned {
 	overflow: hidden;
 	max-height: none;
 
 	.modal-dialog__header {
-		padding: 1.5rem 1.5rem 1rem;
+		padding: 1.5rem 1.5rem 1rem 2rem;
 
 		.h1,
 		.h2,
@@ -74,7 +91,6 @@
 		.h6 {
 			margin-bottom: 0;
 		}
-
 	}
 
 	.modal-dialog__content {

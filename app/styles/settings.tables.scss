@@ -84,3 +84,18 @@ table.data-table.data-table--nowrap th {
   	color: lighten($primary-blue, 5%);
   }
 }
+
+/* Draggable tables
+ ========================================================================== */
+
+tr[draggable="true"].draggable-object td {
+	cursor: grab;
+
+	&:focus {
+		cursor: crosshair;
+	}
+}
+
+tr[draggable="true"].draggable-object.is-dragging-object td {
+	cursor: grabbing;
+}

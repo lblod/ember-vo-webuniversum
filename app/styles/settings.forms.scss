@@ -555,7 +555,7 @@ form.input-field--disabled {
   overflow: hidden;
   position: relative;
   border-radius: 0 !important;
-	border-color: $blue-gray-light !important;
+	border-color: $blue-gray-light;
 }
 
 	.ember-power-select-trigger.ember-basic-dropdown-trigger.ember-view.ember-power-select-trigger--active {
@@ -588,6 +588,10 @@ form.input-field--disabled {
   border-radius: 0;
   border-color: $blue-gray-light;
   color: $gray-dark;
+}
+
+.ember-power-select-dropdown.ember-basic-dropdown-content--above {
+	border-top: 1px solid $blue-gray-light;
 }
 
 .ember-basic-dropdown-content.ember-power-select-dropdown.ember-basic-dropdown-content--below {
@@ -706,6 +710,11 @@ form.input-field--disabled {
 	  top: 0.5rem;
 	}
 
+.power-select.power-select--inline .ember-power-select-trigger,
+.ember-power-select.ember-power-select--inline .ember-power-select-trigger { // remove second selector when all apps are updated
+	display: inline-block;
+}
+
 /* Smaller size
  ========================================================================== */
 
@@ -718,7 +727,27 @@ form.input-field--disabled {
   padding-right: 3rem;
 }
 
-.power-select.power-select--inline .ember-power-select-trigger,
-.ember-power-select.ember-power-select--inline .ember-power-select-trigger { // remove second selector when all apps are updated
-	display: inline-block;
+.ember-power-select--small .ember-power-select-trigger.ember-power-select-multiple-trigger {
+	height: auto;
+	min-height: 3rem;
+}
+
+/* bigger size
+ ========================================================================== */
+
+.ember-power-select--large .ember-power-select-trigger,
+.power-select.power-select--large .ember-power-select-trigger { // remove second selector when all apps are updated
+  font-size: 2rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding-right: 4.5rem;
+
+  > * {
+	  font-size: 2rem;
+  }
+}
+
+.ember-power-select--large .ember-power-select-trigger.ember-power-select-multiple-trigger {
+	height: auto;
+	min-height: 4.5rem;
 }

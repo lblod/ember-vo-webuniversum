@@ -1,6 +1,6 @@
 {
   "name": "@lblod/ember-vo-webuniversum",
-  "version": "0.19.12",
+  "version": "0.20.7",
   "description": "Ember addon wrapping the webuniversum components of Vlaanderen",
   "keywords": [
     "ember-addon"
@@ -37,7 +37,7 @@
     "ember-cli-dependency-checker": "^3.1.0",
     "ember-cli-eslint": "^4.2.3",
     "ember-cli-htmlbars-inline-precompile": "^1.0.3",
-    "ember-cli-inject-live-reload": "^1.8.2",
+    "ember-cli-inject-live-reload": "^2.0.1",
     "ember-cli-release": "^1.0.0-beta.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
