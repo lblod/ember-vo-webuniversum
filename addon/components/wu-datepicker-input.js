@@ -30,7 +30,7 @@ export default TextField.extend({
         return;
       }
     }
-    this.set('value', undefined);
+    this.set('value', null);
   },
   didInsertElement() {
     this._super(...arguments);
@@ -43,6 +43,6 @@ export default TextField.extend({
       this.set('value', date.format(this.get('dateFormat')));
       return;
     }
-    this.set('rawValue', undefined);
+    this.set('rawValue', null);
   }
 });
