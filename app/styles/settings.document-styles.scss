@@ -236,34 +236,9 @@ Style the text from documents here.
 
 
 
+/* Styles for openbaarheid and agendapunt */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-  Editor
-  Style the editor here.
- ========================================================================== */
-
-  /* TODO DOUBLE CHECK WHEN RDFA IS FIXED */
   [typeof="besluit:Agendapunt"] > [property="dc:subject"],
   [property="ext:behandelt"] > span:first-child,
   [property="besluit:gebeurtNa"] + span {
