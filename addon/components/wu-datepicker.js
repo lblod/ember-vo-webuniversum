@@ -46,7 +46,7 @@ export default Component.extend({
    * Current selected value in the datepicker
    *
    * @property value
-   * @type string
+   * @type Date
    * @public
   */
   value: null

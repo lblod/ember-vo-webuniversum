@@ -18,10 +18,35 @@ export default TextField.extend({
     'maxDate:data-datepicker-max'
   ],
   'data-datepicker': true,
-  minDate: null,
-  maxDate: null,
-  rawValue: null,
   dateFormat: 'DD.MM.YYYY',
+
+  /**
+   * Minimal date of the datepicker input field
+   * Format: DD.MM.YYYY
+   *
+   * @property minDate
+   * @type string
+   * @public
+  */
+  minDate: null,
+
+  /**
+   * Maximal date of the datepicker input field
+   *
+   * @property maxDate
+   * @type string
+   * @public
+  */
+  maxDate: null,
+
+  /**
+   * Current selected value in the datepicker
+   *
+   * @property value
+   * @type Date
+   * @public
+  */
+  rawValue: null,
 
   didReceiveAttrs(){
     if(this.get('rawValue')){
