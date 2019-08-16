@@ -66,13 +66,12 @@ export default TextField.extend({
 
   focusOut(){
     let date = moment.utc(this.get('value'), this.get('dateFormat'));
-    if (this.onChange)
-      this.onChange(this.rawValue);
     if(date.isValid()){
       this.set('rawValue', date.toDate());
-      this.set('value', date.format(this.get('dateFormat')));
-      return;
+    } else {
+      this.set('rawValue', null);
     }
-    this.set('rawValue', null);
+    if (this.onChange)
+      this.onChange(this.rawValue);
   }
 });
