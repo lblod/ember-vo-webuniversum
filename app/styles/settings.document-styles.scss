@@ -27,8 +27,7 @@ Style the text from documents here.
     display: block;
   }
 
-	em,
-	i {
+	em {
 		font-style: italic;
 	}
 
@@ -125,25 +124,13 @@ Style the text from documents here.
 	.document-publish,
 	.editor__paper,
 	.document-print {
-    ul.bullet-list {
-      padding-left: 0;
-    }
+    // ul.bullet-list {
+    //   margin-left: 0;
+    // }
 
     ul,
     ol {
-
-    	ol:before,
-	    ul:before {
-	    	content: "";
-	    	display: block;
-	    	position: absolute;
-	    	width: 1.5rem;
-	    	height: 1.5rem;
-	    	left: -2rem;
-	    	top: 0.5rem;
-	    	background-color: $white;
-	    	z-index: 1;
-	    }
+    	list-style: bullet;
     }
 
     ol:not(.bullet-list):not(.numbered-list),
