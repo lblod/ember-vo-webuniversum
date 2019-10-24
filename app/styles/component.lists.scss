@@ -6,13 +6,13 @@
 /* Inline list
  ========================================================================== */
 
-.inline-list li {
+.inline-list > li {
 	display: inline-block;
 	margin-right: 1rem;
 	vertical-align: top;
 }
 
-.inline-list.inline-list--bordered li {
+.inline-list.inline-list--bordered > li {
 	border-right: 1px solid $blue-gray-light;
 	padding-right: 1.5rem;
 	margin-right: 0.8rem;
