@@ -124,12 +124,8 @@ Style the text from documents here.
 	.document-publish,
 	.editor__paper,
 	.document-print {
-    // ul.bullet-list {
-    //   margin-left: 0;
-    // }
 
-    ul,
-    ol {
+    ul {
     	list-style: bullet;
     }
 
