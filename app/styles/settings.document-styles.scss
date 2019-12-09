@@ -138,6 +138,15 @@ Style the text from documents here.
     	}
     }
 
+    ul:not(.bullet-list):not(.numbered-list).article-list {
+    	padding-left: 0;
+
+    	li {
+    		margin-bottom: 1.5rem;
+    		list-style-type: unset;
+    	}
+    }
+
     ul:not(.bullet-list):not(.numbered-list) li {
 
     	> ul > li {
