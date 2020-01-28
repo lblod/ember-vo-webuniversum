@@ -507,6 +507,16 @@ a.link--edit {
   top: 15%;
 }
 
+.link--icon--close {
+  appearance: none;
+  border: 0;
+
+  &:focus {
+    outline: 2px solid $orange;
+    outline-offset: .2rem;
+  }
+}
+
 
 // /* Extra info inside or below button
 //  ========================================================================== */
