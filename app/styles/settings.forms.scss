@@ -561,8 +561,8 @@ i.input-field__icon {
 
 textarea[disabled],
 input[disabled] {
-  background-color: rgba($black, 0.1);
-  color: rgba($black, 0.5);
+  background-color: rgba($gray-dark, 0.1);
+  color: $gray;
 }
 
 
@@ -715,6 +715,10 @@ form.input-field--disabled {
     color: $gray-light-contrast;
     font-style: italic;
     font-weight: 300;
+  }
+
+  .ember-power-select-trigger[aria-disabled="true"] .ember-power-select-placeholder {
+    color: $gray;
   }
 
 /* Restyle for steps with power select
