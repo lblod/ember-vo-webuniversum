@@ -7,6 +7,8 @@
  ========================================================================== */
 
 .pill {
+  font-style: normal;
+
   i.vi {
     display: inline;
     font-size: 80%;
@@ -49,9 +51,9 @@
 
 // Agenda publiek
 .pill--primary-yellow {
-  background-color: rgba($primary-yellow, 0.1);
-  color: mix($primary-yellow, $gray-dark, 40%);
-  border-color: rgba(mix($primary-yellow, $gray-dark, 90%), 1);
+  background-color: $orange-lightest;
+  color: $orange-dark;
+  border-color: $orange-lighter;
 }
 
 // Goedgekeurd
