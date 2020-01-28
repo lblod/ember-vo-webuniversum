@@ -124,6 +124,10 @@ p.uppercase {
 .text-fade {
   color: $gray-light-contrast;
   font-weight: 300;
+
+  .u-bg-block & {
+    color: $gray;
+  }
 }
 
 .text-fade:not(.uppercase) {
