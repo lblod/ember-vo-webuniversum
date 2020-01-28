@@ -23,11 +23,19 @@ button.button {
 
 a.button.button--disabled,
 button.button.button--disabled {
-	pointer-events: none !important;
+  pointer-events: none !important;
+  color:  $blue-gray-dark-contrast;
+  background-color: transparent;
 
 	&:hover {
 		pointer-events: none;
-	}
+  }
+
+  &.button--disabled:before {
+    content: "\02298";
+    position: relative;
+    bottom: -.05ex;
+  }
 }
 
 
@@ -303,7 +311,7 @@ button.button.button--alt {
 	&.button--disabled {
 		color: $blue-gray-light;
 		border-color: $blue-gray-light;
-	}
+  }
 }
 
 a.button.button--alt.button--alt--blue,
