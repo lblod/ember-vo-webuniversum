@@ -3,6 +3,33 @@
   Redefine form and select elements here.
  ========================================================================== */
 
+/* Fix input field placeholder contrast
+ ========================================================================== */
+
+.input-field {
+  // Placeholder styles
+  &::-webkit-input-placeholder {
+    color: $gray-light-contrast;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: $gray-light-contrast;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: $gray-light-contrast;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: $gray-light-contrast;
+    font-style: italic;
+  }
+}
+
+
 /* Fix datepicker width
  ========================================================================== */
 
