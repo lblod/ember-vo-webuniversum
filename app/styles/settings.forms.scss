@@ -11,21 +11,25 @@
   &::-webkit-input-placeholder {
     color: $gray-light-contrast;
     font-style: italic;
+    font-weight: 300;
   }
 
   &::-moz-placeholder {
     color: $gray-light-contrast;
     font-style: italic;
+    font-weight: 300;
   }
 
   &:-ms-input-placeholder {
     color: $gray-light-contrast;
     font-style: italic;
+    font-weight: 300;
   }
 
   &:-moz-placeholder {
     color: $gray-light-contrast;
     font-style: italic;
+    font-weight: 300;
   }
 }
 
@@ -679,21 +683,25 @@ form.input-field--disabled {
     &::-webkit-input-placeholder {
       color: $gray-light-contrast;
       font-style: italic;
+      font-weight: 300;
     }
 
     &::-moz-placeholder {
       color: $gray-light-contrast;
       font-style: italic;
+      font-weight: 300;
     }
 
     &:-ms-input-placeholder {
       color: $gray-light-contrast;
       font-style: italic;
+      font-weight: 300;
     }
 
     &:-moz-placeholder {
       color: $gray-light-contrast;
       font-style: italic;
+      font-weight: 300;
     }
   }
 
@@ -706,6 +714,7 @@ form.input-field--disabled {
   .ember-power-select-placeholder {
     color: $gray-light-contrast;
     font-style: italic;
+    font-weight: 300;
   }
 
 /* Restyle for steps with power select
