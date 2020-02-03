@@ -23,18 +23,12 @@ button.button {
 
 a.button.button--disabled,
 button.button.button--disabled {
-  pointer-events: none !important;
   color:  $blue-gray-dark-contrast;
-  background-color: transparent;
+  background-color: $blue-gray-lighter;
+  pointer-events: none !important;
 
-  &:hover {
-    pointer-events: none;
-  }
-
-  &.button--disabled:before {
-    content: "\02298";
-    position: relative;
-    bottom: -.05ex;
+  table.data-table tbody tr:hover & {
+    background-color: #eeeeee;
   }
 }
 
@@ -122,6 +116,7 @@ a[class^="link--icon--"]:before {
 
 .link--disabled {
   opacity: 0.8;
+  cursor: not-allowed;
 }
 
 .link--icon.link--icon--tiny.link--disabled i,
