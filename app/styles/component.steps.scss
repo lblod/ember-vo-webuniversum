@@ -23,3 +23,20 @@
 		}
 	}
 }
+
+// Fix contrast of disabled step
+.steps .step.step--disabled .step__icon {
+  background-color: $blue-gray-dark-contrast;
+}
+
+.step.step--no-box.step--disabled .step__header {
+  opacity: 1;
+}
+
+.step--disabled .step__title {
+  color: $blue-gray-dark-contrast;
+}
+
+.steps.steps--has-line .step::before {
+  background-color: $blue-gray-light;
+}
