@@ -235,7 +235,7 @@ Style the text from documents here.
   [property="ext:behandelt"] > span:first-child,
   [property="besluit:gebeurtNa"] + span {
   	text-transform: uppercase;
-  	color: $gray-light;
+  	color: $gray-light-contrast;
   	letter-spacing: 1px;
   	font-size: 1.4rem;
   	line-height: 1.8;
@@ -244,7 +244,7 @@ Style the text from documents here.
   [property="besluit:geplandOpenbaar"],
   [property="besluit:openbaar"] {
   	text-transform: uppercase;
-  	color: $gray-light;
+  	color: $gray-light-contrast;
   	letter-spacing: 1px;
   	font-size: 1.4rem;
   	line-height: 1.8;
@@ -267,7 +267,7 @@ Style the text from documents here.
         top: 0.2rem;
         padding-left: 1px;
         z-index: 2;
-        color: $gray-light;
+        color: $gray-light-contrast;
       }
 
       [property="besluit:geplandOpenbaar"][content="false"] i,
