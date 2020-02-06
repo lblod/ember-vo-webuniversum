@@ -594,8 +594,12 @@ form.input-field--disabled {
     box-shadow: none;
   }
 
-  .ember-power-select-trigger.ember-basic-dropdown-trigger.ember-view.ember-power-select-trigger--active:focus {
-    outline: none;
+  .ember-power-select-trigger--active {
+    outline: 2px solid $orange;
+  }
+
+  .ember-basic-dropdown-trigger--below.ember-power-select-trigger--active {
+    outline: 0;
   }
 
 /* search input */
@@ -630,8 +634,8 @@ form.input-field--disabled {
 
   .ember-power-select-search-input:focus {
     outline: none;
-    border-color: $primary-yellow;
-    box-shadow: inset 0 0 0 1px $primary-yellow;
+    border-color: $orange;
+    box-shadow: inset 0 0 0 1px $orange;
   }
 
 /* dropdown */ // Reformat
