@@ -4,7 +4,11 @@ module.exports = {
   name: require('./package').name,
   included: function included(app) {
     this._super.included.apply(this, app);
-    app.import('vendor/lblod/main.css');
+
+    let addonOptions = app.options[this.name];
+    if (shouldImportComponentCss(addonOptions)) {
+      app.import('vendor/lblod/main.css');
+    }
   },
   contentFor: function(type, config) {
     let version = '2.latest';
@@ -25,3 +29,11 @@ module.exports = {
     }
   }
 };
+
+function shouldImportComponentCss(addonOptions = {}) {
+  if (typeof addonOptions.shouldImportComponentCss === 'boolean') {
+    return addonOptions.shouldImportComponentCss;
+  }
+
+  return true;
+}
