@@ -5,8 +5,6 @@ module.exports = {
   included: function included(app) {
     this._super.included.apply(this, app);
     app.import('vendor/lblod/main.css');
-    app.import('vendor/lblod/prototype.css');
-    app.import('vendor/lblod/styleguide.css');
   },
   contentFor: function(type, config) {
     let version = '2.latest';
